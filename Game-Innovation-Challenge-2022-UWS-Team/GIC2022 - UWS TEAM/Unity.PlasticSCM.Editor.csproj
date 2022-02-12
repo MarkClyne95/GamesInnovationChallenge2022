@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2020_3_18;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2020_3_18;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;POSEIDON;JUPITER;GRIFFIN;TEXTURE_GRAPH;TG_SEARCHER;GRIFFIN_2021;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -59,8 +59,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\Diff\GetClientDiffInfos.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Configuration\CloudEdition\Welcome\AutoLogin.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\UI\Tree\TreeViewItemIds.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\IncomingChanges\Gluon\IncomingChangesTab.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Developer\UpdateReport\UpdateReportDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\IncomingChanges\Gluon\IncomingChangesTab.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\PlasticApp.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\UI\Avatar\ApplyCircleMask.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\GetRelativePath.cs" />
@@ -192,8 +192,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\UI\Message\DrawDialogIcon.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Configuration\WriteLogConfiguration.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\AssetOverlays\Cache\LockStatusCache.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Configuration\CloudEdition\Welcome\CreatedOrganizationPanel.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\SetupCloudProjectId.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Configuration\CloudEdition\Welcome\CreatedOrganizationPanel.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Developer\UpdateProgress.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\IncomingChanges\Gluon\Errors\ErrorsListHeaderState.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\UI\NotificationDrawer.cs" />
@@ -271,8 +271,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\UI\Progress\ProgressControlsForDialogs.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\IncomingChanges\Developer\IncomingChangesTreeView.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\Changesets\ChangesetListViewItem.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\Welcome\MacOSConfigWorkaround.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Help\HelpLink.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\Welcome\MacOSConfigWorkaround.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\UI\DrawUserIcon.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Developer\IncomingChangesNotificationPanel.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Configuration\CredentialsDialog.cs" />
@@ -288,9 +288,9 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\PendingChanges\PendingChangesTreeHeaderState.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\CreateWorkspace\Dialogs\CreateRepositoryDialog.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\FileSystemOperation.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\UI\Images.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\IncomingChanges\IIncomingChangesTab.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Views\CreateWorkspace\Dialogs\RepositoryExplorerDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\UI\Images.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Tool\IsExeAvailable.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Help\HelpLinkData.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.9.0\Editor\PlasticSCM\Configuration\EncryptionConfigurationDialog.cs" />
@@ -568,6 +568,9 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
