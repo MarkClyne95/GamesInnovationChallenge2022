@@ -1,0 +1,4 @@
+repository "GIC2022 - UWS TEAM@markiiclyne_gmail_com@cloud"
+  path "/"
+    br "/main"
+    co "/main"
