@@ -2,70 +2,7 @@ fileFormatVersion: 2
 guid: 79efd8071f544874096084f9163cf05f
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
-  - first:
-      74: -88723805440604879
-    second: Cylinder|CylinderAction
-  - first:
-      74: -6242241587816052237
-    second: Cylinder|CylinderAction.001
-  - first:
-      74: 4372184618834679938
-    second: Cylinder|CylinderAction.002
-  - first:
-      74: 3602085371921796995
-    second: Cylinder.001|CylinderAction
-  - first:
-      74: 4639736067092989289
-    second: Cylinder.001|CylinderAction.001
-  - first:
-      74: -8648399014000687782
-    second: Cylinder.001|CylinderAction.002
-  - first:
-      74: 3149465394390671080
-    second: Cylinder.002|CylinderAction
-  - first:
-      74: -6974663243432506211
-    second: Cylinder.002|CylinderAction.001
-  - first:
-      74: 3229665247276425024
-    second: Cylinder.002|CylinderAction.002
-  - first:
-      74: 4306715920476788579
-    second: Cylinder.003|CylinderAction
-  - first:
-      74: -8469494111173391411
-    second: Cylinder.003|CylinderAction.001
-  - first:
-      74: -5593676872762658741
-    second: Cylinder.003|CylinderAction.002
-  - first:
-      74: 1259100930554606383
-    second: Cylinder.004|CylinderAction
-  - first:
-      74: -3896964908068853958
-    second: Cylinder.004|CylinderAction.001
-  - first:
-      74: -8617601798816162016
-    second: Cylinder.004|CylinderAction.002
-  - first:
-      74: -5213651074218866315
-    second: Cylinder.005|CylinderAction
-  - first:
-      74: 7557685338909610746
-    second: Cylinder.005|CylinderAction.001
-  - first:
-      74: -8276307836388777368
-    second: Cylinder.005|CylinderAction.002
-  - first:
-      74: 8952547294952175140
-    second: Cylinder.006|CylinderAction
-  - first:
-      74: 3174572884786118881
-    second: Cylinder.006|CylinderAction.001
-  - first:
-      74: -2572662002691728260
-    second: Cylinder.006|CylinderAction.002
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
