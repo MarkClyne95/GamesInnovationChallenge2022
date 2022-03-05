@@ -26,18 +26,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorBlend:
-        m_Texture: {fileID: 2735337272467629218, guid: 22c8780ef9dcb8349bf3496fa203a88d,
-          type: 2}
+        m_Texture: {fileID: 2735337272467629218, guid: 22c8780ef9dcb8349bf3496fa203a88d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByHeight:
-        m_Texture: {fileID: -3064323783613603193, guid: 22c8780ef9dcb8349bf3496fa203a88d,
-          type: 2}
+        m_Texture: {fileID: -3064323783613603193, guid: 22c8780ef9dcb8349bf3496fa203a88d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByNormal:
-        m_Texture: {fileID: 6102281389721031343, guid: 22c8780ef9dcb8349bf3496fa203a88d,
-          type: 2}
+        m_Texture: {fileID: 6102281389721031343, guid: 22c8780ef9dcb8349bf3496fa203a88d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Control:
@@ -45,8 +42,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Control0:
-        m_Texture: {fileID: -3766439899368218589, guid: 22c8780ef9dcb8349bf3496fa203a88d,
-          type: 2}
+        m_Texture: {fileID: -3766439899368218589, guid: 22c8780ef9dcb8349bf3496fa203a88d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -66,13 +62,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 7329114266959511418, guid: 22c8780ef9dcb8349bf3496fa203a88d,
-          type: 2}
+        m_Texture: {fileID: 7329114266959511418, guid: 22c8780ef9dcb8349bf3496fa203a88d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 3304135468516576355, guid: 22c8780ef9dcb8349bf3496fa203a88d,
-          type: 2}
+        m_Texture: {fileID: 3304135468516576355, guid: 22c8780ef9dcb8349bf3496fa203a88d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal0:
@@ -155,3 +149,4 @@ Material:
     - _Dimension: {r: 512, g: 150, b: 512, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

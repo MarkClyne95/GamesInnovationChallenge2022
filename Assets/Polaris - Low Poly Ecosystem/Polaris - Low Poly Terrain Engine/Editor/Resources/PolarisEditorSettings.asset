@@ -96,20 +96,18 @@ MonoBehaviour:
     texturingModel: 0
     splatsModel: 0
     origin: {x: 0, y: 0, z: 0}
-    tileSize: {x: 500, y: 500, z: 500}
+    tileSize: {x: 512, y: 150, z: 512}
     tileCountX: 1
     tileCountZ: 1
     groupId: 0
-    terrainNamePrefix: Terrain
+    terrainNamePrefix: Terrain 2
     dataDirectory: Assets/_TerrainData
     setShaderGroupId: 0
   renderPipelines:
-    universalRenderPipelinePackage: {fileID: 102900000, guid: 8bc88477f037e96478019bba8de301fd,
-      type: 3}
+    universalRenderPipelinePackage: {fileID: 102900000, guid: 8bc88477f037e96478019bba8de301fd, type: 3}
   topographic:
     enable: 0
-    topographicMaterial: {fileID: 2100000, guid: f1271be60ed7edf4f86c5d532eeb2bf3,
-      type: 2}
+    topographicMaterial: {fileID: 2100000, guid: f1271be60ed7edf4f86c5d532eeb2bf3, type: 2}
   erosionTools:
     livePreviewMode: 0
     dataView: 2
