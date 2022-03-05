@@ -9,9 +9,10 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     bool rotating = false;
     bool moving = false;
     [SerializeField] float appliedForce = 0;
-    [SerializeField]Rigidbody rb;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] GameObject pauseMenu;
 
-    
+
 
     public void RotateCW()
     {
@@ -53,6 +54,21 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     public void StopMovement()
     {
         rb.velocity = Vector3.zero;
+    }
+
+    public void PauseGame()
+    {
+        if(pauseMenu.activeInHierarchy)
+        {
+            Time.timeScale = 1;
+            pauseMenu.SetActive(false);
+        }
+        else
+        {
+            Time.timeScale = 0;
+            pauseMenu.SetActive(true);
+        }
+            
     }
 
     /// <summary>
@@ -105,21 +121,21 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
 
         float count = 0;
 
-        while(count < duration)
+        while (count < duration)
         {
             count += Time.deltaTime;
-            rb.MovePosition(currentPos+direction);
+            rb.MovePosition(currentPos + direction);
             yield return new WaitForFixedUpdate();
         }
 
-        if(count >= duration)
+        if (count >= duration)
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             yield return null;
         }
         moving = false;
-        
-        
+
+
     }
 }

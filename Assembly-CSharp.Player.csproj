@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Player\</OutputPath>
-    <DefineConstants>UNITY_2020_3_18;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;POSEIDON;JUPITER;GRIFFIN;TEXTURE_GRAPH;TG_SEARCHER;GRIFFIN_2021;UNITY_POST_PROCESSING_STACK_V2;DREAMTECK_SPLINES;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2020_3_18;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;POSEIDON;JUPITER;GRIFFIN;TEXTURE_GRAPH;TG_SEARCHER;GRIFFIN_2021;UNITY_POST_PROCESSING_STACK_V2;DREAMTECK_SPLINES;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -53,16 +53,12 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWater.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JDayNightCycleProfile.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TAlphaMergeNode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TSlotDataType.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterProfile.cs" />
     <Compile Include="Assets\Scripts\River\RiverTrash.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\PropellerBoats.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JInternalShaderSettings.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TThresholdNode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSpline.cs" />
@@ -83,7 +79,6 @@
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\Drawing\TNodeDrawState.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TTilingMode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GFpsCounter.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\WakeGenerator.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PProgressCancelledException.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Serialization\TGraphSerializer.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JDisplayNameAttribute.cs" />
@@ -129,7 +124,6 @@
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TGraph.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JCubemapRendererArgs.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineUtilities.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\BoatController.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TTransform2dNode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TQuadTransformNode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGrayscaleNode.cs" />
@@ -144,7 +138,6 @@
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TImageExtension.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PQuadMeshCreator.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TAbstractTextureNode.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\Tools\Proxies.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterControllerPlayerRaft.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TChannelsShuffleNode.cs" />
     <Compile Include="Assets\Scripts\Buoyancy.cs" />
@@ -164,18 +157,14 @@
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\ITEdge.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TTextureChannel.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBlendNode.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\Orbital.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\GameEntity\FloatingGameEntityFlat.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TTilingModeParameter.cs" />
     <Compile Include="Assets\Scripts\test.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\GameEntity\GameEntity.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientLinearNode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TView3DEnvironmentSettings.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TTextureUsage.cs" />
     <Compile Include="Assets\Scripts\River\RiverFollowerTrash.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Sample\Scripts\LightController.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineMeshCreator.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\OceanAdvanced.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TTextureUsageParameter.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientMapNode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TTextureWrapModeParameter.cs" />
@@ -215,18 +204,15 @@
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TSolidColorNode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Polaris Extension\PWaterSplineSync.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PHexMeshCreator.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterMeshType.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\PWaterFX.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\GameEntity\FloatingGameEntityStorm.cs" />
+    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterMeshType.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PTimeMode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JMat.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineAnchor.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PPlaneMeshPattern.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\SplashGenerator.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TMirrorNode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientAxialNode.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TSkewNode.cs" />
-    <Compile Include="Assets\FloatingEntities\Scripts\GameEntity\FloatingGameEntityRealist.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\BuiltinRP\PWetLensRenderer.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TSlotType.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TBlendOpParameter.cs" />
@@ -243,17 +229,18 @@
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\UniversalRP\PWaterEffectRendererFeature.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TBoolParameter.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterProfileDefault.cs" />
-    <Compile Include="Assets\Buoyancy_R.cs" />
-    <Compile Include="Assets\TrashCollection.cs" />
+    <Compile Include="Assets\Scripts\TrashCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\PostProcessing\WetLens.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientRadial.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_4Splats.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\AlphaSplit.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PUniforms.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\PerlinNoise.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ErosionTexturer.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\NoisePainter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_4Splats.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\MaskPainter.shader" />
@@ -269,6 +256,7 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Transform2D.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\changelog.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\SplatPainter.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\PathPainterSplat.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PFresnel.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_GradientLookup.shader" />
@@ -294,10 +282,11 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\UtilitiesCommon.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Topographic\Topographic.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\Internal\CopyTexture.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\OutputToRT.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PDepth.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\InteractiveGrassVectorField.shader" />
-    <None Include="Assets\FloatingEntities\Shaders\Ocean.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientAxial.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Clamp.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\PathPainterMetallicSmoothness.shader" />
@@ -315,9 +304,9 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\SolidColor.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\JSunMoon.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\PostProcessing\WetLensURP.shader" />
-    <None Include="Assets\FloatingEntities\Shaders\OceanAdvanced.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\WarpFilter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Mirror.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\SubDivPainter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Splatter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\JOverheadCloud.cginc" />
@@ -352,13 +341,17 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\JStars.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\Internal\SolidColor.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\SplineGizmos.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\NoiseMapGenerator.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\StampTool\TextureStamperMask.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\SteepnessMapGenerator.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Threshold.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\UniversalRP\WaterAdvancedURP.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\RedToGray.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientLinear.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\RemapPainter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\_CGIncludeTemplate.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Third Parties Notice.txt" />
@@ -367,9 +360,12 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\BuiltinRP_Grass.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\CGIncludes\ColorConversion.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\DistributionMapGenerator.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\BuiltinRP_GrassInteractive.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\UnlitChannelMask.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\CGIncludes\GriffinSplatCommon.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_GradientLookup.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\README.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Blend.shader" />
@@ -378,6 +374,7 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\UniversalRP\UniversalRP_Forward.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\HeightMapDecodeGrayscale.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\HeightMapFromMesh.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Step.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\SubDivisionVisualizer.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientMapDynamic.shader" />
@@ -392,6 +389,7 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PWave.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\changelog.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_4Splats4Normals.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\Mask4Channels.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\BuiltinRP_GrassBillboard.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\SubdivLivePreview2.shader" />
@@ -423,6 +421,7 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\MetallicPainter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\VisibilityPainter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_VertexColor.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Blit.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PMeshNoise.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ErosionToolCommon.cginc" />
@@ -433,16 +432,18 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\QuadTransform.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientMap.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\PostProcessing\UnderwaterURP.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ErosionDataView.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_GradientLookup.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Low Poly Tools Bundle\Readme.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\PathPainterAlbedo.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\RGBASplit.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\WorleyNoise.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_8Splats.shader" />
-    <None Include="Assets\FloatingEntities\Scripts\ArchimedsLab.dll" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\PainterCursor.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\MaskVisualizer.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PRefraction.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\RampMaker.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\ConditionalPainting.cginc" />
@@ -450,7 +451,7 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\TreeBillboard_NoASESupport.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\SplatsToAlbedo.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\SubDivisionMap.shader" />
-    <None Include="Assets\FloatingEntities\Shaders\WaterToolBox.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_4Splats4Normals.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\StepFilter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PUnderwaterCommon.cginc" />
@@ -463,6 +464,7 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Emboss.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Levels.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PLightAbsorption.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\FetchWorldData.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -679,6 +681,9 @@
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.DeviceSimulator.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.DeviceSimulator.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
@@ -690,9 +695,6 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="ArchimedsLab">
-      <HintPath>Assets\FloatingEntities\Scripts\ArchimedsLab.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
