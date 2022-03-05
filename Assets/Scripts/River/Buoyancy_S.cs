@@ -6,7 +6,7 @@ namespace GIC.River {
     [RequireComponent(typeof(Rigidbody))]
     public class Buoyancy_S : MonoBehaviour {
         Rigidbody rb;                                                       // Boat
-        [SerializeField] float upForce = 500.0f;                            // Buoyancy force
+        [SerializeField] public float upForce = 500.0f;                            // Buoyancy force
         [SerializeField] Transform waterTransform;                          // Water
         float waterLevelY;                                                  // Water level y component
         [SerializeField] Transform buoyancyTransform;                       // Force is added at this position   
