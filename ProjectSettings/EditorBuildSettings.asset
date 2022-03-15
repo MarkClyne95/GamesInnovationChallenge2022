@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/RiverTestLevel.unity
+    guid: 3dd8e2a9aae789c41b0e6c50040aa675
   m_configObjects: {}
