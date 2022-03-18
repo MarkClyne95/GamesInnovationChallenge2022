@@ -1,7 +1,9 @@
 using GIC.River;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterControllerPlayerRaft : MonoBehaviour
 {
@@ -11,6 +13,32 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     [SerializeField] float appliedForce = 0;
     [SerializeField] Rigidbody rb;
     [SerializeField] GameObject pauseMenu;
+
+    [SerializeField] GameObject mmCanvas;
+    [SerializeField] GameObject upgradeCanvas;
+
+    [Flags]
+    enum Boats
+    {
+        None = 0b_0000_0000,
+        BASIC = 0b_0000_0001, 
+        UPGRADE1 = 0b_0000_0010,
+        UPGRADE2 = 0b_0000_0011,
+        UPGRADE3 = 0b_0000_0100
+    }
+
+    //set the current boat to basic on first time playing
+    private int currentBoat = (int)Boats.BASIC;
+
+    public Int32 GetCurrentBoat()
+    {
+        return currentBoat;
+    }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
 
 
@@ -138,4 +166,49 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
 
 
     }
+
+
+    #region MainMenu Controls
+    public void StartGame()
+    {
+        SceneManager.LoadScene("RiverScene");
+    }
+
+    public void OpenUpgradeMenu()
+    {
+        mmCanvas.SetActive(false);
+        upgradeCanvas.SetActive(true);
+    }
+
+    public void CloseUpgradeMenu()
+    {
+        mmCanvas.SetActive(true);
+        upgradeCanvas.SetActive(false);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void BasicBoat()
+    {
+        currentBoat = (int)Boats.BASIC;
+    }
+
+    public void UpgradeBoat1()
+    {
+        currentBoat = (int)Boats.UPGRADE1;
+    }
+
+    public void UpgradeBoat2()
+    {
+        currentBoat = (int)Boats.UPGRADE2;
+    }
+
+    public void UpgradeBoat3()
+    {
+        currentBoat = (int)Boats.UPGRADE3;
+    }
+    #endregion
 }
