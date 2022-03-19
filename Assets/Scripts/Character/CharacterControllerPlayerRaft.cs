@@ -45,13 +45,13 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     public void RotateCW()
     {
         //rotate 10 degrees CW
-        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, 10, 0), 0.5f));
+        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, 10, 0), 0.25f));
     }
 
     public void RotateCCW()
     {
         //rotate 10 degrees CCW
-        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, -10, 0), 0.5f));
+        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, -10, 0), 0.25f));
     }
 
     public void MoveLeft()

@@ -65,7 +65,7 @@ namespace GIC.River {
                 waterLevelY = go.transform.position.y;
                 if (transform.position.y < go.transform.position.y)
                 {
-                    float dst = Vector3.Distance(transform.position, new Vector3(transform.position.x, waterLevelY + UP_CONST, transform.position.z));
+                    float dst = Vector3.Distance(transform.position, new Vector3(transform.position.x, waterLevelY, transform.position.z));
                     rb.AddForceAtPosition(Vector3.up * dst * upForce, buoyancyTransform.position, ForceMode.Force);
                 }
             }
