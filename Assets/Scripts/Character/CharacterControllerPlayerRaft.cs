@@ -14,9 +14,11 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] AudioSource audioSrc;
+    [SerializeField] AudioClip ButtonPress;
 
     [SerializeField] GameObject mmCanvas;
     [SerializeField] GameObject upgradeCanvas;
+    [SerializeField] GameObject creditsCanvas;
 
     [Flags]
     enum Boats
@@ -192,6 +194,18 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
         mmCanvas.SetActive(true);
         upgradeCanvas.SetActive(false);
     }
+    public void OpenCreditsMenu()
+    {
+        mmCanvas.SetActive(false);
+        creditsCanvas.SetActive(true);
+    }
+
+    public void CloseCreditsMenu()
+    {
+        mmCanvas.SetActive(true);
+        creditsCanvas.SetActive(false);
+    }
+    
 
     public void ExitGame()
     {
