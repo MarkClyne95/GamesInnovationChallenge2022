@@ -13,6 +13,7 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     [SerializeField] float appliedForce = 0;
     [SerializeField] Rigidbody rb;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] AudioSource audioSrc;
 
     [SerializeField] GameObject mmCanvas;
     [SerializeField] GameObject upgradeCanvas;
@@ -40,7 +41,9 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-
+    private void Start() {
+        audioSrc.Play();
+    }
 
     public void RotateCW()
     {

@@ -9,8 +9,19 @@ using UnityEngine.EventSystems;
 public class TrashCollection : MonoBehaviour
 {
     List<GameObject> trash = new List<GameObject>();
+    [SerializeField]Transform playerTransform;
+    [SerializeField]Animator anim;
+    [SerializeField]AudioSource audioSrc;
+    public AudioClip collectSound;
+    private int trashCollected;
+
     public TMPro.TMP_Text countText;
     int trashCount;
+
+    //getter for trash collected to use in another class
+    public int GetTrashCollected(){
+        return trashCollected;
+    }
 
     private void Awake()
     {
@@ -42,12 +53,17 @@ public class TrashCollection : MonoBehaviour
                 if (touch.phase == TouchPhase.Began && Physics.Raycast(ray, out RaycastHit hit) && hit.collider.CompareTag("Trash"))
                 {
                     GameObject clickedObject = hit.collider.gameObject;
-                    if (clickedObject != null)
+                    Vector3 distanceBetweenCharAndTrash = playerTransform.position - clickedObject.transform.position;
+                    
+                    if (clickedObject != null && distanceBetweenCharAndTrash.magnitude <= 10.0f)
                     {
+                        audioSrc.PlayOneShot(collectSound);
+                        anim.SetTrigger("PickingUp");
                         trash.Remove(clickedObject);
                         countText.text = trash.Count.ToString();
                         Destroy(clickedObject);
                         Debug.Log($"{clickedObject.name} hit");
+                        trashCollected += 1;
                     }
                 }
             }
