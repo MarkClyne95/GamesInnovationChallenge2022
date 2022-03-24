@@ -1,7 +1,9 @@
 using GIC.River;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterControllerPlayerRaft : MonoBehaviour
 {
@@ -11,19 +13,48 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     [SerializeField] float appliedForce = 0;
     [SerializeField] Rigidbody rb;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] AudioSource audioSrc;
 
+    [SerializeField] GameObject mmCanvas;
+    [SerializeField] GameObject upgradeCanvas;
 
+    [Flags]
+    enum Boats
+    {
+        None = 0b_0000_0000,
+        BASIC = 0b_0000_0001, 
+        UPGRADE1 = 0b_0000_0010,
+        UPGRADE2 = 0b_0000_0011,
+        UPGRADE3 = 0b_0000_0100
+    }
+
+    //set the current boat to basic on first time playing
+    private int currentBoat = (int)Boats.BASIC;
+
+    public Int32 GetCurrentBoat()
+    {
+        return currentBoat;
+    }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start() {
+        audioSrc.Play();
+    }
 
     public void RotateCW()
     {
         //rotate 10 degrees CW
-        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, 10, 0), 0.5f));
+        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, 10, 0), 0.25f));
     }
 
     public void RotateCCW()
     {
         //rotate 10 degrees CCW
-        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, -10, 0), 0.5f));
+        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, -10, 0), 0.25f));
     }
 
     public void MoveLeft()
@@ -138,4 +169,49 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
 
 
     }
+
+
+    #region MainMenu Controls
+    public void StartGame()
+    {
+        SceneManager.LoadScene("RiverScene");
+    }
+
+    public void OpenUpgradeMenu()
+    {
+        mmCanvas.SetActive(false);
+        upgradeCanvas.SetActive(true);
+    }
+
+    public void CloseUpgradeMenu()
+    {
+        mmCanvas.SetActive(true);
+        upgradeCanvas.SetActive(false);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void BasicBoat()
+    {
+        currentBoat = (int)Boats.BASIC;
+    }
+
+    public void UpgradeBoat1()
+    {
+        currentBoat = (int)Boats.UPGRADE1;
+    }
+
+    public void UpgradeBoat2()
+    {
+        currentBoat = (int)Boats.UPGRADE2;
+    }
+
+    public void UpgradeBoat3()
+    {
+        currentBoat = (int)Boats.UPGRADE3;
+    }
+    #endregion
 }

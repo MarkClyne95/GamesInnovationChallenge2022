@@ -2,6 +2,8 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
+    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
+    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -22,7 +24,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Player\</OutputPath>
-    <DefineConstants>UNITY_2020_3_18;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;POSEIDON;JUPITER;GRIFFIN;TEXTURE_GRAPH;TG_SEARCHER;GRIFFIN_2021;UNITY_POST_PROCESSING_STACK_V2;DREAMTECK_SPLINES;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_18;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;POSEIDON;JUPITER;GRIFFIN;TEXTURE_GRAPH;TG_SEARCHER;GRIFFIN_2021;UNITY_POST_PROCESSING_STACK_V2;DREAMTECK_SPLINES;POSEIDON_URP;GRIFFIN_URP;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -44,1040 +46,841 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <PropertyGroup>
-    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
-    <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>Android:13</UnityBuildTarget>
-    <UnityVersion>2020.3.18f1</UnityVersion>
-  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWater.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JDayNightCycleProfile.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TAlphaMergeNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TSlotDataType.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterProfile.cs" />
-    <Compile Include="Assets\Scripts\River\RiverTrash.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JInternalShaderSettings.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TThresholdNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSpline.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TGraphContext.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PGeometryUtilities.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PMat.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TCullModeParameter.cs" />
-    <Compile Include="Assets\Scripts\AI\Pathfinding\AStar.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Sample\Scripts\SimpleBuoyController.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBillowNoiseNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TAxisParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TLevelsNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TRectParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TGradientParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TSharpenNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TRgbaMergeNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\BuiltinRP\PWetLens.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\Drawing\TNodeDrawState.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TTilingMode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GFpsCounter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PProgressCancelledException.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Serialization\TGraphSerializer.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JDisplayNameAttribute.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TRidgedNoiseNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientRadialNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TContrastBrightnessNode.cs" />
-    <Compile Include="Assets\Scripts\blank.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JDetailOverlayLayer.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TAxis.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\THslNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TCheckerboardNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TPerlinNoiseNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\BuiltinRP\PUnderwater.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JCurveOrGradient.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JSky.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TBlendModeParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PInternalShaderSettings.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PRenderPipelineType.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TCurveNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GCameraBuoyancyController.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TSlotReference.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PCommon.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TCropNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PAreaMeshCreator.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JProgressCancelledException.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TGraphUtilities.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PVersionInfo.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PDisplayNameAttribute.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\UniversalRP\PWetLensOverride.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBlurNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBrickNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TClampNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TRenderTextureRequest.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TWarpNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientMapDynamicNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Sample\Scripts\JTakeScreenshot.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBlendSrcDstNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGaussianBlurNode.cs" />
-    <Compile Include="Assets\Scripts\River\River.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineCreator.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TEmbossNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TLoadTextureNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TGraph.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JCubemapRendererArgs.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineUtilities.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TTransform2dNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TQuadTransformNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGrayscaleNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JInternalMaterials.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TShapeNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterShaderProvider.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TSplatterNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TColorspaceConversionNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TPowNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JCubemapRenderer.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TRgbaSplitNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TImageExtension.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PQuadMeshCreator.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TAbstractTextureNode.cs" />
-    <Compile Include="Assets\Scripts\Character\CharacterControllerPlayerRaft.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TChannelsShuffleNode.cs" />
-    <Compile Include="Assets\Scripts\Buoyancy.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TUtilities.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TValueNoiseNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TFloatParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TPolarToCartesianNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TInvertNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TOutputNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PLightingModel.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TEdge.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TSlot.cs" />
-    <Compile Include="Assets\Scripts\WaterBody.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PUtilities.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GRuntimeTexturePainter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TStepNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\ITEdge.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TTextureChannel.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBlendNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TTilingModeParameter.cs" />
-    <Compile Include="Assets\Scripts\test.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientLinearNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TView3DEnvironmentSettings.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TTextureUsage.cs" />
-    <Compile Include="Assets\Scripts\River\RiverFollowerTrash.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Sample\Scripts\LightController.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineMeshCreator.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TTextureUsageParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientMapNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TTextureWrapModeParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PIndex2D.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Attributes\TNodeMetadataAttribute.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TGraphData.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TVector2Parameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PCustomMeshBaker.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TAlphaSplitNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\IPMeshCreator.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterMode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GTakeScreenshot.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TOutputToRTNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JDayNightCycle.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\PWaterFXProfile.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JUtilities.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JSkyProfile.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TPremitives.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\UniversalRP\PUnderwaterOverride.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TDrawing.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JAnimatableAttribute.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JCommon.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PPoseidonSettings.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Sample\Scripts\SnapToSceneViewCamera.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\BuiltinRP\PUnderwaterRenderer.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Serialization\ITGraphSerializeCallbackReceiver.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineSegment.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TVersionInfo.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TConst.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TGenericParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JJupiterSettings.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TIntParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TCartesianToPolarNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JFogSyncOption.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JAnimatedProperty.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PInternalMaterials.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TSolidColorNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Polaris Extension\PWaterSplineSync.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PHexMeshCreator.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\PWaterFX.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterMeshType.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PTimeMode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JMat.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineAnchor.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PPlaneMeshPattern.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TMirrorNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientAxialNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TSkewNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\BuiltinRP\PWetLensRenderer.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TSlotType.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TBlendOpParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JRenderPipelineType.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TColorParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TCurveParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JVersionInfo.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientAngularNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TNormalNode.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TStringParameter.cs" />
-    <Compile Include="Assets\Scripts\River\Buoyancy_S.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterExtension.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PDiamondMeshCreator.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\UniversalRP\PWaterEffectRendererFeature.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TBoolParameter.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterProfileDefault.cs" />
-    <Compile Include="Assets\Scripts\TrashCollection.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JDayNightCycleProfile.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TAlphaMergeNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JInternalShaderSettings.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TThresholdNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TGraphContext.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSpline.cs" />
+     <Compile Include="Assets\Scripts\AI\Pathfinding\AStar.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Sample\Scripts\SimpleBuoyController.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBillowNoiseNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TAxisParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TRectParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TGradientParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TRgbaMergeNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GFpsCounter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TTilingMode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Serialization\TGraphSerializer.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PProgressCancelledException.cs" />
+     <Compile Include="Assets\Corvostudio\Demo-Shared\SimpleCameraControllerCS.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TRidgedNoiseNode.cs" />
+     <Compile Include="Assets\Scripts\blank.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TCheckerboardNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TPerlinNoiseNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JSky.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TBlendModeParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PInternalShaderSettings.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PRenderPipelineType.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GCameraBuoyancyController.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PAreaMeshCreator.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PDisplayNameAttribute.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TWarpNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Sample\Scripts\JTakeScreenshot.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBlendSrcDstNode.cs" />
+     <Compile Include="Assets\Scripts\River\River.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineCreator.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TLoadTextureNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TGraph.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TTransform2dNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JInternalMaterials.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TSplatterNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TPowNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JCubemapRenderer.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TImageExtension.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PQuadMeshCreator.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TAbstractTextureNode.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterControllerPlayerRaft.cs" />
+     <Compile Include="Assets\Scripts\Buoyancy.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TUtilities.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TValueNoiseNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TFloatParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TPolarToCartesianNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TInvertNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TOutputNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PLightingModel.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TSlot.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PUtilities.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GRuntimeTexturePainter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\ITEdge.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TTilingModeParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientLinearNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TView3DEnvironmentSettings.cs" />
+     <Compile Include="Assets\Scripts\River\RiverFollowerTrash.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TGraphData.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TVector2Parameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\IPMeshCreator.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterMode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GTakeScreenshot.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JDayNightCycle.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JUtilities.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\UniversalRP\PUnderwaterOverride.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TDrawing.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JAnimatableAttribute.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PPoseidonSettings.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineSegment.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TVersionInfo.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TGenericParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JJupiterSettings.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PInternalMaterials.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Polaris Extension\PWaterSplineSync.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PHexMeshCreator.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PTimeMode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JMat.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PPlaneMeshPattern.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TMirrorNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientAxialNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TSkewNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TSlotType.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JRenderPipelineType.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TColorParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TCurveParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JVersionInfo.cs" />
+     <Compile Include="Assets\Scripts\River\Buoyancy_S.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterExtension.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\UniversalRP\PWaterEffectRendererFeature.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TBoolParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterProfileDefault.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWater.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TSlotDataType.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterProfile.cs" />
+     <Compile Include="Assets\Scripts\River\RiverTrash.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PGeometryUtilities.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PMat.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TCullModeParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TLevelsNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TSharpenNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\BuiltinRP\PWetLens.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\Drawing\TNodeDrawState.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JDisplayNameAttribute.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientRadialNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TContrastBrightnessNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JDetailOverlayLayer.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TAxis.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\THslNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\BuiltinRP\PUnderwater.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JCurveOrGradient.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TCurveNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TSlotReference.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PCommon.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TCropNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JProgressCancelledException.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TGraphUtilities.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PVersionInfo.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\UniversalRP\PWetLensOverride.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBlurNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBrickNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TClampNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Graph\TRenderTextureRequest.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientMapDynamicNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGaussianBlurNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TEmbossNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Utilities\JCubemapRendererArgs.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineUtilities.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TQuadTransformNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGrayscaleNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TShapeNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterShaderProvider.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TColorspaceConversionNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TRgbaSplitNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TChannelsShuffleNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Connection\TEdge.cs" />
+     <Compile Include="Assets\Scripts\WaterBody.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TStepNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TTextureChannel.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TBlendNode.cs" />
+     <Compile Include="Assets\Scripts\test.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TTextureUsage.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Sample\Scripts\LightController.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineMeshCreator.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TTextureUsageParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientMapNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TTextureWrapModeParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Utilities\PIndex2D.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Attributes\TNodeMetadataAttribute.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PCustomMeshBaker.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TAlphaSplitNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TOutputToRTNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\PWaterFXProfile.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JSkyProfile.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TPremitives.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JCommon.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Sample\Scripts\SnapToSceneViewCamera.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\BuiltinRP\PUnderwaterRenderer.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Serialization\ITGraphSerializeCallbackReceiver.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Common\TConst.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TIntParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TCartesianToPolarNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\Core\JFogSyncOption.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Scripts\DayNightCycle\JAnimatedProperty.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TSolidColorNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PWaterMeshType.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\PWaterFX.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PSplineAnchor.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Effects\BuiltinRP\PWetLensRenderer.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TBlendOpParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TGradientAngularNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Nodes\TNormalNode.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Parameters\TStringParameter.cs" />
+     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Scripts\Core\PDiamondMeshCreator.cs" />
+     <Compile Include="Assets\Scripts\TrashCollection.cs" />
+ <Reference Include="UnityEngine">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AIModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.AIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ARModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.ARModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AccessibilityModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.AccessibilityModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AndroidJNIModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.AndroidJNIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AnimationModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.AnimationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AssetBundleModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.AssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AudioModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.AudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClothModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CoreModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.CoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CrashReportingModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.CrashReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DSPGraphModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.DSPGraphModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DirectorModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.DirectorModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GIModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.GIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GameCenterModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.GameCenterModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GridModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.GridModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HotReloadModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.HotReloadModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.IMGUIModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.IMGUIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ImageConversionModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.ImageConversionModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.InputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputLegacyModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.InputLegacyModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.JSONSerializeModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.JSONSerializeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.LocalizationModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.LocalizationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticleSystemModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.ParticleSystemModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PerformanceReportingModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.PerformanceReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PhysicsModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.PhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Physics2DModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.Physics2DModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ProfilerModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.ProfilerModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ScreenCaptureModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.ScreenCaptureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SharedInternalsModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.SharedInternalsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteMaskModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.SpriteMaskModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteShapeModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.SpriteShapeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StreamingModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.StreamingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SubstanceModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.SubstanceModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SubsystemsModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.SubsystemsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TLSModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.TLSModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.TerrainModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainPhysicsModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextCoreModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.TextCoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextRenderingModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TilemapModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.TilemapModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIElementsModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UIElementsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIElementsNativeModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UIElementsNativeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UNETModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UNETModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UmbraModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UmbraModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityAnalyticsModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityConnectModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityCurlModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UnityCurlModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityTestProtocolModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UnityWebRequestModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VFXModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.VFXModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VRModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.VRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VehiclesModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.VehiclesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VideoModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.VideoModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WindModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.WindModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XRModule">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VSCode.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VisualStudio.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Pinwheel.Polaris.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Pinwheel.Polaris.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Searcher.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Postprocessing.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PlasticSCM.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ShaderGraph.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Dreamteck.Splines.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Dreamteck.Splines.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Dreamteck.Utilities.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Dreamteck.Utilities.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.DeviceSimulator.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.DeviceSimulator.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Editor">
+ <HintPath>D:/GIC2022/GIC2022/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="netstandard">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Win32.Primitives">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.AppContext">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections.Concurrent">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections.NonGeneric">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections.Specialized">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.EventBasedAsync">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.Primitives">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.TypeConverter">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.TypeConverter.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Console">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Console.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data.Common">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Data.Common.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Contracts">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Contracts.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Debug">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Debug.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.FileVersionInfo">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Process">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Process.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.StackTrace">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.TextWriterTraceListener">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Tools">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tools.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.TraceSource">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TraceSource.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Tracing">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tracing.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Drawing.Primitives">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Drawing.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Dynamic.Runtime">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Dynamic.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization.Calendars">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Calendars.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Compression">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Compression.ZipFile">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.ZipFile.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem.DriveInfo">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem.Primitives">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem.Watcher">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Watcher.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.IsolatedStorage">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.IsolatedStorage.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.MemoryMappedFiles">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.MemoryMappedFiles.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Pipes">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Pipes.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.UnmanagedMemoryStream">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq.Expressions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Expressions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq.Parallel">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Parallel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq.Queryable">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Http">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.NameResolution">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.NetworkInformation">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NetworkInformation.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Ping">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Ping.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Primitives">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Requests">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Requests.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Security">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Security.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Sockets">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Sockets.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.WebHeaderCollection">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebHeaderCollection.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.WebSockets.Client">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.Client.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.WebSockets">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ObjectModel">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ObjectModel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Primitives">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Resources.Reader">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Reader.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Resources.ResourceManager">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.ResourceManager.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Resources.Writer">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Writer.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.CompilerServices.VisualC">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Handles">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Handles.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Numerics">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Numerics.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Formatters">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Json">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Primitives">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Xml">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Claims">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Claims.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Algorithms">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Csp">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Csp.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Encoding">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Encoding.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Primitives">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.X509Certificates">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Principal">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Principal.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.SecureString">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.SecureString.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.Encoding">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.Encoding.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.RegularExpressions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.RegularExpressions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Overlapped">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Overlapped.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Tasks">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Tasks.Parallel">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.Parallel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Thread">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Thread.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.ThreadPool">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.ThreadPool.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Timer">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Timer.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ValueTuple">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ValueTuple.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.ReaderWriter">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.ReaderWriter.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XDocument">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XmlDocument">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XmlSerializer">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XPath">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XPath.XDocument">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Numerics.Vectors">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="mscorlib">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.Composition">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ComponentModel.Composition.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Core">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="System">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Drawing">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Drawing.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Compression.FileSystem">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.IO.Compression.FileSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Net.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Numerics">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Numerics.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Runtime.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.Web">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ServiceModel.Web.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Transactions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Transactions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Web">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Web.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Windows">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Windows.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.Linq">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.Serialization">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\PostProcessing\WetLens.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientRadial.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_4Splats.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\AlphaSplit.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PUniforms.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\PerlinNoise.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ErosionTexturer.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\NoisePainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_4Splats.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\MaskPainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\JCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Crop.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\JupiterSky.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\CGIncludes\GriffinCG.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\Blur.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\GeometryLivePreview.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\PolarToCartesian.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PCore.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\StampTool\StampToolCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Transform2D.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\changelog.txt" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\SplatPainter.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\PathPainterSplat.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PFresnel.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_GradientLookup.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\HSL.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_8Splats.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\BuiltinRP\WaterBasicBRP.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\BuiltinRP\BuiltinRP_ForwardBase.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Curve.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\PreviewRedToGray.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\UniversalRP\RiverURP.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\PaintToolCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\CopyTexture.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GaussianBlur.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\UniversalRP\UniversalRP_SurfaceFunction.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\ElevationPainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PPostProcessingCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_VertexColor.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\ColorspaceConversion.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\BuiltinRP\RiverBRP.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_ColorMap.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\RGBAMerge.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Shaders\ThunderParticles.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\UtilitiesCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Topographic\Topographic.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\Internal\CopyTexture.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\OutputToRT.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PDepth.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\InteractiveGrassVectorField.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientAxial.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Clamp.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\PathPainterMetallicSmoothness.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_ColorMap.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\ChannelToGrayscale.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\LivePreviewCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\BuiltinRP\BuiltinRP_ForwardAdd.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\CartesianToPolar.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PWetLensCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Warp.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Shape.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\changelog.txt" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\BlendSrcDst.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Demo\Water.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\SolidColor.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\JSunMoon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\PostProcessing\WetLensURP.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\WarpFilter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Mirror.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\SubDivPainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Splatter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\JOverheadCloud.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\GriffinBillboardCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\PostProcessing\Underwater.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PFoam.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\SolidColor.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\GrassPreview.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_4Splats.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\InvertFilter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Sharpen.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\ErosionLivePreview.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\PainterCursorProjector.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ThermalErosion.compute" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PCaustic.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\InitErosion.compute" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\SplineMask.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\JupiterSkyShadow.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\SmoothnessPainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\HeightSamplingPainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\BuiltinRP\BuiltinRP_SurfaceFunction.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\TerrainPerPixelNormalMapRenderer.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\CGIncludes\GriffinGrassCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Blur.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PReflection.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\CGIncludes\MathCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_VertexColor.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\BuiltinRP\WaterAdvancedBRP.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\TextureToolCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\AlbedoPainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\JStars.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\Internal\SolidColor.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\SplineGizmos.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\NoiseMapGenerator.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\StampTool\TextureStamperMask.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\SteepnessMapGenerator.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Threshold.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\UniversalRP\WaterAdvancedURP.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\RedToGray.shader" />
-    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientLinear.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\RemapPainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\_CGIncludeTemplate.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Third Parties Notice.txt" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\CurveFilter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PRipple.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\BuiltinRP_Grass.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\CGIncludes\ColorConversion.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\DistributionMapGenerator.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\BuiltinRP_GrassInteractive.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\UnlitChannelMask.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\CGIncludes\GriffinSplatCommon.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_GradientLookup.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\README.txt" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Blend.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\UniversalRP\WaterBackFaceURP.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\changelog.txt" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\UniversalRP\UniversalRP_Forward.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\HeightMapDecodeGrayscale.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\HeightMapFromMesh.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Step.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\SubDivisionVisualizer.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientMapDynamic.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\VisibilityLivePreview2.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\CGIncludes\BlendCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\HydraullicErosion.compute" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\JSkyGradient.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Shaders\Thunder.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\BillboardTool\BillboardCreatorNormal.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\UniversalRP\WaterBasicURP.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientAngular.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PWave.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\changelog.txt" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_4Splats4Normals.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\Mask4Channels.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\BuiltinRP_GrassBillboard.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\SubdivLivePreview2.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\JDetailOverlay.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\ValueNoise.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\DrawTextureArraySlice.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\CGIncludes\EffectCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\TerracePainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ApplyErosion.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\JHorizonCloud.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Invert.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\UniversalRP\UniversalRP_Lighting.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Pow.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Skew.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\ContrastBrightness.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\BlurRadius.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\SplineToolCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_8Splats.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Grayscale.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\AlphaMerge.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\ChannelsShuffle.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\CGIncludes\CGIncludeTemplate.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\BillboardTool\BillboardCreatorAtlas.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Checkerboard.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\GeometricalHeightmapRenderer.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\Wireframe.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Normal.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\BlendMapGenerator.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\MetallicPainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\VisibilityPainter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_VertexColor.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Blit.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PMeshNoise.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ErosionToolCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_4Splats4Normals.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\StampTool\Stamper.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Brick.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_ColorMap.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\QuadTransform.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\GradientMap.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\PostProcessing\UnderwaterURP.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ErosionDataView.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_GradientLookup.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Low Poly Tools Bundle\Readme.txt" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\PathPainterAlbedo.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\RGBASplit.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\WorleyNoise.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_8Splats.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\PainterCursor.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\MaskVisualizer.shader" />
-    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PRefraction.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\RampMaker.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\ConditionalPainting.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\TerrainNormalMapRenderer.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\TreeBillboard_NoASESupport.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\SplatsToAlbedo.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\SubDivisionMap.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_4Splats4Normals.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\StepFilter.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PUnderwaterCommon.cginc" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\BuiltinRP\WaterBackfaceBRP.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\Internal\CopyTexture.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Jupiter - Procedural Sky\Runtime\Shaders\Internal\SolidColor.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Output.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\HeightmapConverterEncodeRG.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\Internal\DepthOnly.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Emboss.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\TextureGraph\Core\Runtime\Shaders\Levels.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PLightAbsorption.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
-    <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\FetchWorldData.shader" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ARModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ARModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AndroidJNIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AnimationModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AudioModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.AudioModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClothModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ClothModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.DSPGraphModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.DirectorModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.GIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.GIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.GameCenterModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.GridModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.GridModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.HotReloadModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.IMGUIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.InputModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.InputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.LocalizationModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.LocalizationModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.PhysicsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.Physics2DModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ProfilerModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ProfilerModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.StreamingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.StreamingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.SubstanceModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SubsystemsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TLSModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TLSModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TerrainModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TextCoreModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TextCoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.TilemapModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UIElementsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIElementsNativeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UIElementsNativeModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UNETModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UNETModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UmbraModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityCurlModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityTestProtocolModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VFXModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.VFXModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VRModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.VRModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.VehiclesModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VideoModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.VideoModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.WindModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.WindModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.XRModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.XRModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Dreamteck.Splines.Editor">
-      <HintPath>Library\ScriptAssemblies\Dreamteck.Splines.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Pinwheel.Polaris.Editor">
-      <HintPath>Library\ScriptAssemblies\Pinwheel.Polaris.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Dreamteck.Utilities.Editor">
-      <HintPath>Library\ScriptAssemblies\Dreamteck.Utilities.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.DeviceSimulator.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.DeviceSimulator.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="netstandard">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Win32.Primitives">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\Microsoft.Win32.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.AppContext">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.AppContext.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.Concurrent">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Collections.Concurrent.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.NonGeneric">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Collections.NonGeneric.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.Specialized">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Collections.Specialized.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ComponentModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.EventBasedAsync">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ComponentModel.EventBasedAsync.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.Primitives">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ComponentModel.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.TypeConverter">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ComponentModel.TypeConverter.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Console">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Console.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Data.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.Contracts">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.Debug">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.Debug.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.FileVersionInfo">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.FileVersionInfo.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.Process">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.Process.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.StackTrace">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.StackTrace.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.TextWriterTraceListener">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.TextWriterTraceListener.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.Tools">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.Tools.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.TraceSource">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.TraceSource.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.Tracing">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Diagnostics.Tracing.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing.Primitives">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Drawing.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Dynamic.Runtime">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Dynamic.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Globalization.Calendars">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Globalization.Calendars.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Globalization">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Globalization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Globalization.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Globalization.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Compression">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.Compression.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Compression.ZipFile">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.Compression.ZipFile.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.FileSystem">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.FileSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.FileSystem.DriveInfo">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.FileSystem.DriveInfo.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.FileSystem.Primitives">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.FileSystem.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.FileSystem.Watcher">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.FileSystem.Watcher.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.IsolatedStorage">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.IsolatedStorage.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.MemoryMappedFiles">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.MemoryMappedFiles.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Pipes">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.Pipes.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.UnmanagedMemoryStream">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.IO.UnmanagedMemoryStream.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq.Expressions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Linq.Expressions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq.Parallel">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Linq.Parallel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq.Queryable">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Linq.Queryable.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.NameResolution">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.NameResolution.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.NetworkInformation">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.NetworkInformation.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Ping">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Ping.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Primitives">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Requests">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Requests.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Security">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Sockets">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.Sockets.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.WebHeaderCollection">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.WebHeaderCollection.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.WebSockets.Client">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.WebSockets.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.WebSockets">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Net.WebSockets.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ObjectModel">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ObjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Reflection.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Reflection.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Primitives">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Reflection.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Resources.Reader">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Resources.Reader.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Resources.ResourceManager">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Resources.ResourceManager.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Resources.Writer">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Resources.Writer.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.VisualC">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.CompilerServices.VisualC.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Handles">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Handles.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.InteropServices.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Numerics">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Numerics.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Formatters">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Serialization.Formatters.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Json">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Serialization.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Primitives">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Serialization.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Xml">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Runtime.Serialization.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Claims">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Claims.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Algorithms">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Cryptography.Algorithms.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Csp">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Cryptography.Csp.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Encoding">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Cryptography.Encoding.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Primitives">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Cryptography.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.X509Certificates">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Cryptography.X509Certificates.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Principal">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.Principal.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.SecureString">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Security.SecureString.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Encoding">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Text.Encoding.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Encoding.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Text.Encoding.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.RegularExpressions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Text.RegularExpressions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Overlapped">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.Overlapped.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.Tasks.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Parallel">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.Tasks.Parallel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Thread">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.Thread.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.ThreadPool">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.ThreadPool.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Timer">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Threading.Timer.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ValueTuple">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.ValueTuple.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.ReaderWriter">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.ReaderWriter.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.XDocument">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.XDocument.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.XmlDocument">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.XmlDocument.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.XmlSerializer">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.XmlSerializer.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.XPath">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.XPath.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.XPath.XDocument">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.Xml.XPath.XDocument.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics.Vectors">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
-    </Reference>
-    <Reference Include="mscorlib">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\mscorlib.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.Composition">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.ComponentModel.Composition.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Core">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Drawing.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Compression.FileSystem">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.IO.Compression.FileSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Numerics.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Runtime.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.Web">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.ServiceModel.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Transactions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Transactions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Windows.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Serialization">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{18957EE8-EEC1-C0CD-061E-7E8C7D6512C3}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{11F47131-350B-C6A8-6756-C8415DAD5D8E}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{CF89AB5D-9653-4025-1A0E-0914879DCAA5}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{7B23AF5E-702B-CA41-B62F-4C6A6A73BA7B}</Project>
       <Name>Unity.Timeline</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{B2EAD9C4-6E67-96E2-895E-FB8E9304BC1F}</Project>
       <Name>Unity.TextMeshPro</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{B34FC142-BAAB-4CE0-E421-2EB52B8BF66B}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Dreamteck.Utilities.csproj">
       <Project>{5ADFB9F2-6E53-0437-0AA0-29F8DA5F71D8}</Project>
       <Name>Dreamteck.Utilities</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{101AF07C-97D0-F4F4-9F30-D79A6C98CC8F}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{9ED30C77-6C05-3E4F-1352-95A3B7DC3860}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Dreamteck.Splines.csproj">
-      <Project>{AAA98CC8-F14C-2CC1-3E0F-454ABD55480F}</Project>
-      <Name>Dreamteck.Splines</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Pinwheel.Polaris.Runtime.csproj">
       <Project>{4FE0E09A-DD67-033F-269C-7BDD683BBD0D}</Project>
       <Name>Pinwheel.Polaris.Runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
       <Project>{29F55E90-E83F-6238-E6D2-8ECD4FC5E8F1}</Project>
       <Name>Unity.Mathematics</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
+      <Project>{18957EE8-EEC1-C0CD-061E-7E8C7D6512C3}</Project>
+      <Name>Unity.Postprocessing.Runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{5C27707B-BCDC-4E08-A88B-9316DA3A45BF}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{9DDE91B4-CF2F-C5CD-3E4D-0FCEB9408D9D}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Dreamteck.Splines.csproj">
+      <Project>{AAA98CC8-F14C-2CC1-3E0F-454ABD55480F}</Project>
+      <Name>Dreamteck.Splines</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

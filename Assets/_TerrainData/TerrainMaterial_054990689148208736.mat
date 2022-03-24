@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TerrainMaterial_054990689148208736
-  m_Shader: {fileID: 4800000, guid: 393b4ce2c53aaa243a4d40cf0b012ec0, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 70127249b2641354c9a6e991b9b46b70, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -24,15 +24,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorBlend:
-        m_Texture: {fileID: -7669613791134335411, guid: 1cfa9e26eee46f642ac4f4dbc2f597a1, type: 2}
+        m_Texture: {fileID: -7785485029834124549, guid: 1cfa9e26eee46f642ac4f4dbc2f597a1, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByHeight:
-        m_Texture: {fileID: 69733074698422466, guid: 1cfa9e26eee46f642ac4f4dbc2f597a1, type: 2}
+        m_Texture: {fileID: 8626141300485579048, guid: 1cfa9e26eee46f642ac4f4dbc2f597a1, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByNormal:
-        m_Texture: {fileID: -7239560906624307977, guid: 1cfa9e26eee46f642ac4f4dbc2f597a1, type: 2}
+        m_Texture: {fileID: 2328537015674005904, guid: 1cfa9e26eee46f642ac4f4dbc2f597a1, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -68,6 +68,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
