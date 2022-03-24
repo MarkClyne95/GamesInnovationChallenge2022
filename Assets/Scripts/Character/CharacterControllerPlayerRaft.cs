@@ -41,10 +41,6 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start() {
-        audioSrc.Play();
-    }
-
     public void RotateCW()
     {
         //rotate 10 degrees CW
@@ -175,6 +171,14 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("RiverScene");
+    }
+
+    public void RestartGame(){
+
+    }
+
+    public void ReturnToMenu(){
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void OpenUpgradeMenu()

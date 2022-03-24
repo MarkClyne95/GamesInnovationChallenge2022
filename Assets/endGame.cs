@@ -16,6 +16,7 @@ public class endGame : MonoBehaviour
             Time.timeScale = 0;
             winScreen.SetActive(true);
             PlayerPrefs.SetInt("Money", tc.GetTrashCollected());
+            Debug.LogWarning(tc.GetTrashCollected());
         }
     }
 }
