@@ -176,11 +176,15 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     }
 
     public void RestartGame(){
-
+        audioSrc.Stop();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 
     public void ReturnToMenu(){
+        audioSrc.Stop();
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 
     public void OpenUpgradeMenu()

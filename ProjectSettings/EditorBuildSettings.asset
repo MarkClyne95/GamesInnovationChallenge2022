@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/RiverTestLevel(Depreciated).unity
-    guid: 3dd8e2a9aae789c41b0e6c50040aa675
+    path: Assets/Scenes/MainMenu.unity
+    guid: f07afaebbd5bb4546af8d029144e56fe
   - enabled: 1
     path: Assets/Scenes/RiverScene.unity
     guid: 0a2e4af536d29214a8bd69d16b9537bf
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: f07afaebbd5bb4546af8d029144e56fe
   m_configObjects: {}

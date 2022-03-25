@@ -74,7 +74,7 @@ public class TrashCollection : MonoBehaviour
                         countText.text = trash.Count.ToString();
                         Destroy(clickedObject);
                         Debug.Log($"{clickedObject.name} hit");
-                        
+                        factField.text = GetRandomFact();
                     }
                 }
             }
