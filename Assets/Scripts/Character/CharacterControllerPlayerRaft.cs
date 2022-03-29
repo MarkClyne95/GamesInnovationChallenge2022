@@ -170,10 +170,7 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
 
 
     #region MainMenu Controls
-    public void StartGame()
-    {
-        SceneManager.LoadScene("RiverScene");
-    }
+    public void StartGame() => LoadTrigger.LoadScene("RiverScene");
 
     public void RestartGame(){
         audioSrc.Stop();
@@ -183,7 +180,7 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
 
     public void ReturnToMenu(){
         audioSrc.Stop();
-        SceneManager.LoadScene("MainMenu");
+        LoadTrigger.LoadScene("MainMenu");
         Time.timeScale = 1;
     }
 
