@@ -42,7 +42,6 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
     }
 
     public void RotateCW()
