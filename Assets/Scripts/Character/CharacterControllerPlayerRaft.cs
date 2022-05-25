@@ -100,6 +100,19 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
             
     }
 
+    private float startingPosition;
+
+    private void Update() {
+        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        {
+            Vector3 touchDelta = Input.GetTouch(0).deltaPosition;
+
+            raftToRotate.transform.Rotate(0, touchDelta.x * 0.25f, 0);
+            Debug.Log("Yes");
+            
+        }
+    }
+
     /// <summary>
     /// Rotate the raft by a given number of degrees over a specified duration
     /// </summary>
