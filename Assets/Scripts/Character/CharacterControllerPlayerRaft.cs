@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CharacterControllerPlayerRaft : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     [SerializeField] GameObject mmCanvas;
     [SerializeField] GameObject upgradeCanvas;
     [SerializeField] GameObject creditsCanvas;
+    
 
     [Flags]
     enum Boats
@@ -171,7 +173,8 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
 
     #region MainMenu Controls
     public void StartGame() => LoadTrigger.LoadScene("RiverScene");
-
+        
+    
     public void RestartGame(){
         audioSrc.Stop();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
