@@ -8,42 +8,32 @@ using UnityEngine.UI;
 
 public class CharacterControllerPlayerRaft : MonoBehaviour
 {
+    [Tooltip("The raft GameObject that is to be rotated")]
     [SerializeField] GameObject raftToRotate;
+
+    [Tooltip("Whether or not the raft is currently rotating")]
     bool rotating = false;
+
+    [Tooltip("Whether or not the raft is currently in motion")]
     bool moving = false;
+
+    [Tooltip("The force to apply to the rigidbody to move it")]
     [SerializeField] float appliedForce = 0;
+
+    [Tooltip("The Rigidbody of the raft")]
     [SerializeField] Rigidbody rb;
+
+    [Tooltip("The pause menu GameObject")]
     [SerializeField] GameObject pauseMenu;
+
+    [Tooltip("Audio Source for sound effects")]
     [SerializeField] AudioSource audioSrc;
+
+    [Tooltip("Sound effect for button presses")]
     [SerializeField] AudioClip ButtonPress;
 
-    [SerializeField] GameObject mmCanvas;
-    [SerializeField] GameObject upgradeCanvas;
-    [SerializeField] GameObject creditsCanvas;
     
-
-    [Flags]
-    enum Boats
-    {
-        None = 0b_0000_0000,
-        BASIC = 0b_0000_0001, 
-        UPGRADE1 = 0b_0000_0010,
-        UPGRADE2 = 0b_0000_0011,
-        UPGRADE3 = 0b_0000_0100
-    }
-
-    //set the current boat to basic on first time playing
-    private int currentBoat = (int)Boats.BASIC;
-
-    public Int32 GetCurrentBoat()
-    {
-        return currentBoat;
-    }
-
-    private void Awake()
-    {
-    }
-
+    #region Public Methods
     public void RotateCW()
     {
         //rotate 10 degrees CW
@@ -100,7 +90,26 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
         }
             
     }
+    
+    public void RestartGame(){
+        audioSrc.Stop();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+    }
 
+    public void ReturnToMenu(){
+        audioSrc.Stop();
+        LoadTrigger.LoadScene("MainMenu");
+        Time.timeScale = 1;
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    #endregion
+
+    #region Private Methods
     /// <summary>
     /// Rotate the raft by a given number of degrees over a specified duration
     /// </summary>
@@ -134,105 +143,6 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
             yield return null;
         }
         rotating = false;
-    }
-
-    IEnumerator moveRaft(GameObject raft, Vector3 direction, float duration)
-    {
-        //if already moving, do nothing
-        if (moving)
-        {
-            yield break;
-        }
-        moving = true;
-
-        Vector3 currentPos = raft.transform.position;
-
-        Vector3 destination = raft.transform.position + direction;
-
-        float count = 0;
-
-        while (count < duration)
-        {
-            count += Time.deltaTime;
-            rb.MovePosition(currentPos + direction);
-            yield return new WaitForFixedUpdate();
-        }
-
-        if (count >= duration)
-        {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            yield return null;
-        }
-        moving = false;
-
-
-    }
-
-
-    #region MainMenu Controls
-    public void StartGame() => LoadTrigger.LoadScene("RiverScene");
-        
-    
-    public void RestartGame(){
-        audioSrc.Stop();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1;
-    }
-
-    public void ReturnToMenu(){
-        audioSrc.Stop();
-        LoadTrigger.LoadScene("MainMenu");
-        Time.timeScale = 1;
-    }
-
-    public void OpenUpgradeMenu()
-    {
-        mmCanvas.SetActive(false);
-        upgradeCanvas.SetActive(true);
-    }
-
-    public void CloseUpgradeMenu()
-    {
-        mmCanvas.SetActive(true);
-        upgradeCanvas.SetActive(false);
-    }
-    public void OpenCreditsMenu()
-    {
-        mmCanvas.SetActive(false);
-        creditsCanvas.SetActive(true);
-    }
-
-    public void CloseCreditsMenu()
-    {
-        mmCanvas.SetActive(true);
-        creditsCanvas.SetActive(false);
-    }
-    
-
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
-
-    public void BasicBoat()
-    {
-        currentBoat = (int)Boats.BASIC;
-    }
-
-    public void UpgradeBoat1()
-    {
-        currentBoat = (int)Boats.UPGRADE1;
-    }
-
-    public void UpgradeBoat2()
-    {
-        currentBoat = (int)Boats.UPGRADE2;
-    }
-
-    public void UpgradeBoat3()
-    {
-        currentBoat = (int)Boats.UPGRADE3;
     }
     #endregion
 }

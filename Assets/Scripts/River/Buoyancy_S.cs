@@ -21,36 +21,10 @@ namespace GIC.River {
 
         private void Start() {
             rb = GetComponent<Rigidbody>();
-            int currentBoat = raftControls.GetCurrentBoat();
 
             foreach (GameObject go in GameObject.FindGameObjectsWithTag("Water"))
             {
                 waterTransformList.Add(go);
-            }
-
-            //disable each of the boats so we can enable them later
-            foreach(GameObject go in boatList)
-            {
-                go.SetActive(false);
-            }
-
-            switch (currentBoat)
-            {
-                case 1:
-                    boatList[0].SetActive(true);
-                    break;
-
-                case 2:
-                    boatList[1].SetActive(true);
-                    break;
-
-                case 3:
-                    boatList[2].SetActive(true);
-                    break;
-
-                case 4:
-                    boatList[3].SetActive(true);
-                    break;
             }
         }
 
