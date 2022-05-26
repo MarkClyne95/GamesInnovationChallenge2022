@@ -32,6 +32,8 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     [Tooltip("Sound effect for button presses")]
     [SerializeField] AudioClip ButtonPress;
 
+    public Animator anim;
+
     
     #region Public Methods
     public void RotateCW()
