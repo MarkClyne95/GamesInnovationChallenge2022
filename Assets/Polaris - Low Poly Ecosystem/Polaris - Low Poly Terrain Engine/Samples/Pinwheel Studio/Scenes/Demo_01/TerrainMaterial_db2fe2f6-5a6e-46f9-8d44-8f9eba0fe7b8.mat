@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TerrainMaterial_db2fe2f6-5a6e-46f9-8d44-8f9eba0fe7b8
-  m_Shader: {fileID: 4800000, guid: 393b4ce2c53aaa243a4d40cf0b012ec0, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 70127249b2641354c9a6e991b9b46b70, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -24,18 +24,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorBlend:
-        m_Texture: {fileID: 8467983359856552572, guid: 9213dfcf6003cb44f87e44d234a793a0,
-          type: 2}
+        m_Texture: {fileID: -4438286013775410765, guid: 9213dfcf6003cb44f87e44d234a793a0, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByHeight:
-        m_Texture: {fileID: 5148946091343729462, guid: 9213dfcf6003cb44f87e44d234a793a0,
-          type: 2}
+        m_Texture: {fileID: -5268331504963815360, guid: 9213dfcf6003cb44f87e44d234a793a0, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByNormal:
-        m_Texture: {fileID: -3687059152383572859, guid: 9213dfcf6003cb44f87e44d234a793a0,
-          type: 2}
+        m_Texture: {fileID: 3780439825303600940, guid: 9213dfcf6003cb44f87e44d234a793a0, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -55,12 +52,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 312323268460719155, guid: 9213dfcf6003cb44f87e44d234a793a0,
-          type: 2}
+        m_Texture: {fileID: 312323268460719155, guid: 9213dfcf6003cb44f87e44d234a793a0, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 47a91f8808e6f334a84f127655c54663, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -72,6 +68,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -98,3 +106,4 @@ Material:
     - _Color: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     - _Dimension: {r: 512, g: 256, b: 512, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []

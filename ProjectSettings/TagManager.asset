@@ -7,6 +7,7 @@ TagManager:
   - Water
   - Ground
   - Trash
+  - Boat
   layers:
   - Default
   - TransparentFX

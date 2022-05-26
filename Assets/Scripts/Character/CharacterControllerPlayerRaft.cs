@@ -1,29 +1,49 @@
 using GIC.River;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CharacterControllerPlayerRaft : MonoBehaviour
 {
+    [Tooltip("The raft GameObject that is to be rotated")]
     [SerializeField] GameObject raftToRotate;
+
+    [Tooltip("Whether or not the raft is currently rotating")]
     bool rotating = false;
+
+    [Tooltip("Whether or not the raft is currently in motion")]
     bool moving = false;
+
+    [Tooltip("The force to apply to the rigidbody to move it")]
     [SerializeField] float appliedForce = 0;
+
+    [Tooltip("The Rigidbody of the raft")]
     [SerializeField] Rigidbody rb;
+
+    [Tooltip("The pause menu GameObject")]
     [SerializeField] GameObject pauseMenu;
 
+    [Tooltip("Audio Source for sound effects")]
+    [SerializeField] AudioSource audioSrc;
 
+    [Tooltip("Sound effect for button presses")]
+    [SerializeField] AudioClip ButtonPress;
 
+    
+    #region Public Methods
     public void RotateCW()
     {
         //rotate 10 degrees CW
-        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, 10, 0), 0.5f));
+        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, 10, 0), 0.25f));
     }
 
     public void RotateCCW()
     {
         //rotate 10 degrees CCW
-        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, -10, 0), 0.5f));
+        StartCoroutine(rotateRaft(raftToRotate, new Vector3(0, -10, 0), 0.25f));
     }
 
     public void MoveLeft()
@@ -70,7 +90,26 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
         }
             
     }
+    
+    public void RestartGame(){
+        audioSrc.Stop();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+    }
 
+    public void ReturnToMenu(){
+        audioSrc.Stop();
+        LoadTrigger.LoadScene("MainMenu");
+        Time.timeScale = 1;
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    #endregion
+
+    #region Private Methods
     /// <summary>
     /// Rotate the raft by a given number of degrees over a specified duration
     /// </summary>
@@ -105,37 +144,16 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
         }
         rotating = false;
     }
+    #endregion
 
-    IEnumerator moveRaft(GameObject raft, Vector3 direction, float duration)
-    {
-        //if already moving, do nothing
-        if (moving)
+    private void Update() {
+        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
-            yield break;
+            Vector3 touchDelta = Input.GetTouch(0).deltaPosition;
+
+            raftToRotate.transform.Rotate(0, touchDelta.x * 0.25f, 0);
+            Debug.Log("Yes");
+            
         }
-        moving = true;
-
-        Vector3 currentPos = raft.transform.position;
-
-        Vector3 destination = raft.transform.position + direction;
-
-        float count = 0;
-
-        while (count < duration)
-        {
-            count += Time.deltaTime;
-            rb.MovePosition(currentPos + direction);
-            yield return new WaitForFixedUpdate();
-        }
-
-        if (count >= duration)
-        {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            yield return null;
-        }
-        moving = false;
-
-
     }
 }
