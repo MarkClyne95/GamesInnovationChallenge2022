@@ -157,5 +157,10 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
             Debug.Log("Yes");
             
         }
+
+        if (Input.touchCount > 0)
+        {
+            anim.SetTrigger("FiringHarpoon");
+        }
     }
 }
