@@ -20,7 +20,7 @@ namespace GIC.Harpoon{
 
         public LaunchData CalculateLaunchData() {
             //SetHeight();
-
+            
             float displacementY = Target.position.y - player.position.y; // Calculate Py from diagram
             Vector3 displacementXZ =
                 new Vector3(Target.position.x - player.position.x, 0,
@@ -33,6 +33,26 @@ namespace GIC.Harpoon{
             return
                 new LaunchData(velocityXZ + velocityY,
                     time); // velocityXZ has ) as Y value and velocityY has 0 as XZ values so this just combines them
+        }
+        public bool TryCalculateLaunchData(out LaunchData data) {
+            //SetHeight();
+            
+            float displacementY = Target.position.y - player.position.y; // Calculate Py from diagram
+            Vector3 displacementXZ =
+                new Vector3(Target.position.x - player.position.x, 0,
+                    Target.position.z - player.position.z); // Calculate Px but for XZ axis not just X 
+            float time = Mathf.Sqrt(-2 * height / gravity) +
+                         Mathf.Sqrt(2 * (displacementY - height) / gravity); // This is  Thorizontal  = Tup + Tdown
+            if (time == float.NaN) {
+                data = new LaunchData(Vector3.zero, 0);
+                return false;
+            }
+            Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2.0f * gravity * height); // This is the initial up Velocity
+
+            Vector3 velocityXZ = displacementXZ / time; // this is  horizontal velocity Uh (the one that uses Tup + Tdown)
+            data = new LaunchData(velocityXZ + velocityY, time); // velocityXZ has ) as Y value and velocityY has 0 as XZ values so this just combines them
+            return true;
+
         }
 
         private void SetHeight() {
@@ -47,7 +67,7 @@ namespace GIC.Harpoon{
             height = Mathf.Clamp(height, minHeight, maxHeight);
         }
 
-        //Returns an array containg the displacement of the ball at time intervals through flight
+        //Returns an array containing the displacement of the ball at time intervals through flight
         public Vector3[] GetPathPoints() {
             LaunchData launchData = CalculateLaunchData();
             Vector3 previousDrawPoint = player.position;
@@ -112,6 +132,10 @@ namespace GIC.Harpoon{
             lineRenderer.SetPositions(linePoints);
             lineRenderer.SetColors(Color.black, Color.black);
             //lineRenderer.SetWidth(0.5f, 0.5f);
+        }
+
+        public void ClearLine() {
+            lineRenderer.positionCount = 0;
         }
     }
 }
