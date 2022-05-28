@@ -7,7 +7,7 @@ using UnityEngine;
 namespace GIC.Harpoon{
     public class Harpoon : MonoBehaviour{
         private Rigidbody harpoonRb;
-        private bool isHarpoonFired = false;
+        private bool isHarpoonInAir = false;
 
         private Vector3 resetLocalPosition;
         private Quaternion resetLocalRotation;
@@ -18,36 +18,44 @@ namespace GIC.Harpoon{
             harpoonRb = GetComponent<Rigidbody>();
             resetLocalPosition = transform.localPosition;
             resetLocalRotation = transform.localRotation;
-            startParent = transform;
+            startParent = transform.parent;
         }
 
-        public void FireHarpoon(Vector3 velocity) {
+        public void FireHarpoon(Vector3 velocity, Vector3 targetVelocity = new Vector3()) {
             harpoonRb.velocity = Vector3.zero;
             harpoonRb.isKinematic = false;
-            harpoonRb.AddForce(velocity, ForceMode.VelocityChange);
+            harpoonRb.AddForce(velocity + targetVelocity, ForceMode.VelocityChange);
             harpoonRb.transform.parent = null;
-            isHarpoonFired = true;
+            isHarpoonInAir = true;
         }
 
         public void ResetHarpoon() {
             harpoonRb.velocity = Vector3.zero;
             harpoonRb.isKinematic = true;
-            transform.position = resetLocalPosition;
-            transform.rotation = resetLocalRotation;
-            transform.parent = transform;
+            transform.parent = startParent;
+            transform.localPosition = resetLocalPosition;
+            transform.localRotation = resetLocalRotation;
         }
 
         private void Update() {
-            if (isHarpoonFired) {
+            if (isHarpoonInAir) {
                 transform.rotation = Quaternion.LookRotation(harpoonRb.velocity.normalized);
             }
         }
 
         private void OnCollisionEnter(Collision collision) {
-            if (isHarpoonFired) {
-                isHarpoonFired = false;
-                harpoonRb.isKinematic = true;
+            if (!isHarpoonInAir) {
+                return;
             }
+            print("Harpoon Collision: " + collision.gameObject.name);
+            isHarpoonInAir = false;
+            harpoonRb.isKinematic = true;
+            if (collision.gameObject.layer == LayerMask.NameToLayer("HarpoonableTrash")) {
+                transform.parent = collision.transform;
+            }
+            
+
+            
 
             /*if (collision.gameObject.layer == harpoonableTrash.value) {
             print("Hit Trash");

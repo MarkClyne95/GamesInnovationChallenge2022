@@ -38,15 +38,16 @@ namespace GIC.Harpoon{
             //SetHeight();
             
             float displacementY = Target.position.y - player.position.y; // Calculate Py from diagram
+            if (displacementY > height) {
+                data = default;
+                return false;
+            }
             Vector3 displacementXZ =
                 new Vector3(Target.position.x - player.position.x, 0,
                     Target.position.z - player.position.z); // Calculate Px but for XZ axis not just X 
             float time = Mathf.Sqrt(-2 * height / gravity) +
                          Mathf.Sqrt(2 * (displacementY - height) / gravity); // This is  Thorizontal  = Tup + Tdown
-            if (time == float.NaN) {
-                data = new LaunchData(Vector3.zero, 0);
-                return false;
-            }
+            
             Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2.0f * gravity * height); // This is the initial up Velocity
 
             Vector3 velocityXZ = displacementXZ / time; // this is  horizontal velocity Uh (the one that uses Tup + Tdown)
@@ -69,7 +70,12 @@ namespace GIC.Harpoon{
 
         //Returns an array containing the displacement of the ball at time intervals through flight
         public Vector3[] GetPathPoints() {
-            LaunchData launchData = CalculateLaunchData();
+            //LaunchData launchData = CalculateLaunchData();
+            LaunchData launchData;
+            if (!TryCalculateLaunchData(out launchData)) {
+                return Array.Empty<Vector3>();
+            }
+            
             Vector3 previousDrawPoint = player.position;
             int resolution = 30; // how many times are we checking the path when drawing the line
             Vector3[] linePath = new Vector3[resolution + 1];
