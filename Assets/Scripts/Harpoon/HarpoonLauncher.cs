@@ -3,110 +3,105 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GIC.Harpoon{
     public class HarpoonLauncher : MonoBehaviour{
-        [Tooltip("The distance that the harpoon will fire")] [SerializeField]
+        [Tooltip("The distance that the harpoon can detect/hot trash from")] [SerializeField]
         private float harpoonRange = 10.0f;
-
-        private Rigidbody harpoonRb;
 
         [Tooltip("Objects on this layer can be detected and fired at")] [SerializeField]
         private LayerMask harpoonableTrash;
 
-        [Tooltip("The script wheich does the trajectory calculations for the harpoon")] [SerializeField]
+        [Tooltip("The script which does the trajectory calculations for the harpoon")] [SerializeField]
         private PhysicsTrajectory physicsTrajectory;
 
-        [Tooltip("The Harpoon GameObject ")] [SerializeField]
-        private Harpoon harpoonObject;
-        //private bool isHarpoonFired = false;
-        //[SerializeField] private GameObject platform;
+        [FormerlySerializedAs("harpoonObject")] [Tooltip("The Harpoon which is lauched ")] [SerializeField]
+        private Harpoon harpoon;
 
-        private Vector3 resetLocalPosition;
-        private Quaternion resetLocalRotation;
-        private Transform startParent;
+        [Tooltip("Draw a sphere to show the range of the harpoon launcher")]
+        [SerializeField] private bool showRange;
 
-        private void Awake() {
-            harpoonRb = GetComponentInChildren<Rigidbody>();
-            resetLocalPosition = transform.localPosition;
-            resetLocalRotation = transform.localRotation;
-            startParent = transform;
-        }
 
-        private void Update() {
-            //if (Input.GetKey(KeyCode.K)) {
+        private void FixedUpdate() {
+            if (Input.GetKey(KeyCode.K)) {
                 DrawTrajectory();
-            //}
+            }
 
             if (Input.GetKeyUp(KeyCode.K)) {
-                FireHarpoon();
+                LaunchHarpoon();
             }
 
             if (Input.GetKeyDown(KeyCode.L)) {
-                harpoonObject.ResetHarpoon();
+                harpoon.ResetHarpoon();
             }
         }
 
+        /// <summary>
+        /// Drawn the trajectory of the harpoon to the closest trash
+        /// </summary>
         private void DrawTrajectory() {
-            GameObject closestGarbage = FindClosestGarbage();
+            var closestGarbage = FindClosestTrash();
             if (closestGarbage == null) {
                 return;
             }
-
             physicsTrajectory.Target = closestGarbage.transform;
-            Vector3[] pathPoints = physicsTrajectory.GetPathPoints();
+            var pathPoints = physicsTrajectory.GetPathPoints();
             if (pathPoints.Length > 0) {
                 physicsTrajectory.RenderPath(pathPoints);
             }
         }
 
-        private void FireHarpoon() {
+        private void LaunchHarpoon() {
             physicsTrajectory.ClearLine();
-            GameObject target = FindClosestGarbage();
-            if (target == null) {
-                return;
-            }
-
-            Fire(target);
+            var closestTrash = FindClosestTrash();
+            //print("Closest Trash: " + closestTrash);
+            if (closestTrash == null) { return; }
+            ThrowHarpoon(closestTrash);
         }
 
-
-        private GameObject FindClosestGarbage() {
-            Collider[] trashArray = Physics.OverlapSphere(transform.position, harpoonRange, harpoonableTrash.value);
+        /// <summary>
+        ///  Returns the closest trash to the Harpoon Launcher
+        /// </summary>
+        private GameObject FindClosestTrash() {
+            var trashArray = Physics.OverlapSphere(transform.position, harpoonRange, harpoonableTrash.value);
             if (trashArray.Length == 0) {
                 return null;
             }
-
-            trashArray = trashArray.OrderBy(t => Vector3.Distance(transform.position, t.gameObject.transform.position)).ToArray();
+            
+            //--Sorts the array of collider by distance to the harpoon launcher (closest first)
+            trashArray = trashArray.OrderBy(t => Vector3.Distance(transform.position, t.transform.position)).ToArray();
             return trashArray[0].gameObject;
         }
 
-        private void Fire(GameObject target) {
-            physicsTrajectory.Target = target.transform;
-            LaunchData launchData;
-            if (physicsTrajectory.TryCalculateLaunchData(out launchData)) {
-                Vector3 targetVelocity = Vector3.zero;
-                Rigidbody targetRb = target.GetComponent<Rigidbody>();
-                if (targetRb!= null) {
-                    targetVelocity = targetRb.velocity;
-                }
-                Vector3 harpoonVelocity = launchData.initialVelocity;
-                harpoonObject.FireHarpoon(harpoonVelocity, targetVelocity);
+        /// <summary>
+        /// Calculate the velocity the harpoon needs to reach the current position of the trash.
+        /// Get the velocity of the trash. The two velocities will be added together and applied to the harpoon. This will account for the
+        /// distance the trash traveled while the harpoon was in the air
+        /// </summary>
+        /// <param name="trash">The game object the harpoon is going to hit</param>
+        private void ThrowHarpoon(GameObject trash) {
+            physicsTrajectory.Target = trash.transform;
+            if (!physicsTrajectory.TryCalculateLaunchData(out var launchData)) {
+                print("Throw Failed");
+                return;
+            }
+            //--Get the velocity of the target if it has a rigidbody
+            var targetVelocity = Vector3.zero;
+            var targetRb = trash.GetComponent<Rigidbody>();
+            if (targetRb != null) {
+                targetVelocity = targetRb.velocity;
+            }
+            var harpoonVelocity = launchData.initialVelocity;
+            harpoon.Throw(harpoonVelocity, targetVelocity);
+        }
+        
+        //Draws the harpoon launchers range
+        private void OnDrawGizmosSelected() {
+            if (showRange) {
+                Gizmos.color = new Color(0, 0, 1, 0.5f);
+                Gizmos.DrawSphere(transform.position, harpoonRange);
             }
         }
-
-        private void OnDrawGizmosSelected() {
-            //Gizmos.color = Color.black;
-            Gizmos.color = new Color(0, 0, 1, 0.5f);
-            Gizmos.DrawSphere(transform.position, harpoonRange);
-        }
-
-        /*private void ResetHarpoon() {
-            harpoonRb.position = resetLocalPosition;
-            harpoonRb.rotation = resetLocalRotation;
-            harpoonRb.velocity = Vector3.zero;
-            harpoonRb.isKinematic = true;
-            harpoonRb.transform.parent = transform;
-        }*/
     }
 }

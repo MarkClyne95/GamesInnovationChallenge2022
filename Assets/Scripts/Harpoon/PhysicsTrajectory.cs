@@ -5,50 +5,62 @@ using UnityEngine;
 
 namespace GIC.Harpoon{
     public class PhysicsTrajectory : MonoBehaviour{
-        [SerializeField] private Rigidbody player;
+        [Tooltip("The rigidbody of the object the trajectory is being calculated for")]
+        [SerializeField] private Rigidbody launchObjectRigidbody;
         public Transform Target { get; set; }
 
-        [SerializeField] float height = 5; // Height of ball ??
+        [Tooltip("The height above the initial position of the launchObjectRigidbody that it will reach. (Increase this if trying to hit objects above the harpoon)")]
+        [SerializeField] float trajectoyHeight = 1;              
         [SerializeField] float gravity = -9.81f;
-        [SerializeField] float maxHeight = 10f;
-        [SerializeField] float minHeight = 1.5f;
-        [SerializeField] float heightChangeSpeed = 10f; // how fast the height on player input
+        //[SerializeField] float maxHeight = 10f;
+        //[SerializeField] float minHeight = 1.5f;
+        //[SerializeField] float heightChangeSpeed = 10f; // how fast the height on player input
 
         [SerializeField] LineRenderer lineRenderer;
-        [SerializeField] GameObject leapLandObject;
+        //[SerializeField] GameObject leapLandObject;
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>Launch data contain the initial velocity required and the time it will take to reach the target</returns>
         public LaunchData CalculateLaunchData() {
             //SetHeight();
-            
-            float displacementY = Target.position.y - player.position.y; // Calculate Py from diagram
+            float displacementY = Target.position.y - launchObjectRigidbody.position.y; // Calculate Py from diagram
             Vector3 displacementXZ =
-                new Vector3(Target.position.x - player.position.x, 0,
-                    Target.position.z - player.position.z); // Calculate Px but for XZ axis not just X 
-            float time = Mathf.Sqrt(-2 * height / gravity) +
-                         Mathf.Sqrt(2 * (displacementY - height) / gravity); // This is  Thorizontal  = Tup + Tdown
-            Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2.0f * gravity * height); // This is the initial up Velocity
+                new Vector3(Target.position.x - launchObjectRigidbody.position.x, 0,
+                    Target.position.z - launchObjectRigidbody.position.z); // Calculate Px but for XZ axis not just X 
+            float time = Mathf.Sqrt(-2 * trajectoyHeight / gravity) +
+                         Mathf.Sqrt(2 * (displacementY - trajectoyHeight) / gravity); // This is  Thorizontal  = Tup + Tdown
+            Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2.0f * gravity * trajectoyHeight); // This is the initial up Velocity
 
             Vector3 velocityXZ = displacementXZ / time; // this is  horizontal velocity Uh (the one that uses Tup + Tdown)
             return
                 new LaunchData(velocityXZ + velocityY,
                     time); // velocityXZ has ) as Y value and velocityY has 0 as XZ values so this just combines them
         }
+        
+        /// <summary>
+        /// Check if it is possible to reach the target and calculates the initial velocity required to get there
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>True if it is possible to reach target and false if not.</returns>
         public bool TryCalculateLaunchData(out LaunchData data) {
             //SetHeight();
             
-            float displacementY = Target.position.y - player.position.y; // Calculate Py from diagram
-            if (displacementY > height) {
+            float displacementY = Target.position.y - launchObjectRigidbody.position.y; // Calculate Py from diagram
+            if (displacementY > trajectoyHeight) {
+                print("Couldn't calculate initial velocity to reach target. ");
                 data = default;
                 return false;
             }
             Vector3 displacementXZ =
-                new Vector3(Target.position.x - player.position.x, 0,
-                    Target.position.z - player.position.z); // Calculate Px but for XZ axis not just X 
-            float time = Mathf.Sqrt(-2 * height / gravity) +
-                         Mathf.Sqrt(2 * (displacementY - height) / gravity); // This is  Thorizontal  = Tup + Tdown
+                new Vector3(Target.position.x - launchObjectRigidbody.position.x, 0,
+                    Target.position.z - launchObjectRigidbody.position.z); // Calculate Px but for XZ axis not just X 
+            float time = Mathf.Sqrt(-2 * trajectoyHeight / gravity) +
+                         Mathf.Sqrt(2 * (displacementY - trajectoyHeight) / gravity); // This is  Thorizontal  = Tup + Tdown
             
-            Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2.0f * gravity * height); // This is the initial up Velocity
+            Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2.0f * gravity * trajectoyHeight); // This is the initial up Velocity
 
             Vector3 velocityXZ = displacementXZ / time; // this is  horizontal velocity Uh (the one that uses Tup + Tdown)
             data = new LaunchData(velocityXZ + velocityY, time); // velocityXZ has ) as Y value and velocityY has 0 as XZ values so this just combines them
@@ -56,27 +68,23 @@ namespace GIC.Harpoon{
 
         }
 
-        private void SetHeight() {
+        /*private void SetHeight() {
             if (Input.GetButton("IncreaseHeight")) {
-                height += heightChangeSpeed * Time.deltaTime;
+                trajectoyHeight += heightChangeSpeed * Time.deltaTime;
             }
-
             if (Input.GetButton("DecreaseHeight")) {
-                height -= heightChangeSpeed * Time.deltaTime;
+                trajectoyHeight -= heightChangeSpeed * Time.deltaTime;
             }
-
-            height = Mathf.Clamp(height, minHeight, maxHeight);
-        }
+            trajectoyHeight = Mathf.Clamp(trajectoyHeight, minHeight, maxHeight);
+        }*/
 
         //Returns an array containing the displacement of the ball at time intervals through flight
         public Vector3[] GetPathPoints() {
             //LaunchData launchData = CalculateLaunchData();
-            LaunchData launchData;
-            if (!TryCalculateLaunchData(out launchData)) {
+            if (!TryCalculateLaunchData(out var launchData)) {
                 return Array.Empty<Vector3>();
             }
-            
-            Vector3 previousDrawPoint = player.position;
+            Vector3 previousDrawPoint = launchObjectRigidbody.position;
             int resolution = 30; // how many times are we checking the path when drawing the line
             Vector3[] linePath = new Vector3[resolution + 1];
 
@@ -85,9 +93,8 @@ namespace GIC.Harpoon{
                     i / (float)resolution *
                     launchData.timeTotarget; // gives a variable going from 0 to the timeToTarget over the course of the for loop
                 Vector3 displacement = launchData.initialVelocity * simulationTime +
-                                       Vector3.up * gravity * simulationTime * simulationTime /
-                                       2f; // using 3rd suvat equation  s = ut + at^2 / 2
-                Vector3 drawPoint = player.position + displacement;
+                                       Vector3.up * gravity * simulationTime * simulationTime / 2f; // using 3rd suvat equation  s = ut + at^2 / 2
+                Vector3 drawPoint = launchObjectRigidbody.position + displacement;
                 Debug.DrawLine(previousDrawPoint, drawPoint, Color.green);
                 previousDrawPoint = drawPoint;
                 linePath[i] = drawPoint; // will miss first point i.e player position
@@ -96,7 +103,9 @@ namespace GIC.Harpoon{
             return linePath;
         }
 
-        public Vector3[] GetPathPointsNoLimit() {
+        //--This is from the other game that used this code. 
+        
+        /*public Vector3[] GetPathPointsNoLimit() {
             float maxCheckTime = 5f;
             float timeIntervalBetweenPoints = 0.01f;
             float time = 0;
@@ -123,12 +132,9 @@ namespace GIC.Harpoon{
             }
 
             return linePathList.ToArray();
-        }
+        }*/
 
         private bool CheckBallCollision(Vector3 drawPoint, float radius) {
-            /*if (Physics.CheckSphere(drawPoint,radius, 1 << LayerMask.NameToLayer("Ground"))) {
-            Debug.DrawLine(drawPoint, drawPoint + (Vector3.up * 5),Color.black, 10);
-        }*/
             return Physics.CheckSphere(drawPoint, radius, 1 << LayerMask.NameToLayer("Ground"));
         }
 

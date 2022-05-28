@@ -9,6 +9,7 @@ namespace GIC.Harpoon{
         private Rigidbody harpoonRb;
         private bool isHarpoonInAir = false;
 
+        //--Used to reset the harpoon  
         private Vector3 resetLocalPosition;
         private Quaternion resetLocalRotation;
         private Transform startParent;
@@ -21,15 +22,21 @@ namespace GIC.Harpoon{
             startParent = transform.parent;
         }
 
-        public void FireHarpoon(Vector3 velocity, Vector3 targetVelocity = new Vector3()) {
+        /// <summary>
+        /// T
+        /// </summary>
+        /// <param name="initialVelocity">The initial velocity required to reach the target</param>
+        /// <param name="velocityOfTarget">This will be added onto the initial velocity so a moving target can be hit </param>
+        public void Throw(Vector3 initialVelocity, Vector3 velocityOfTarget = new Vector3()) {
             harpoonRb.velocity = Vector3.zero;
             harpoonRb.isKinematic = false;
-            harpoonRb.AddForce(velocity + targetVelocity, ForceMode.VelocityChange);
+            harpoonRb.AddForce(initialVelocity + velocityOfTarget, ForceMode.VelocityChange);
             harpoonRb.transform.parent = null;
             isHarpoonInAir = true;
         }
 
         public void ResetHarpoon() {
+            isHarpoonInAir = false;
             harpoonRb.velocity = Vector3.zero;
             harpoonRb.isKinematic = true;
             transform.parent = startParent;
@@ -47,7 +54,7 @@ namespace GIC.Harpoon{
             if (!isHarpoonInAir) {
                 return;
             }
-            print("Harpoon Collision: " + collision.gameObject.name);
+            //print("Harpoon Collision: " + collision.gameObject.name);
             isHarpoonInAir = false;
             harpoonRb.isKinematic = true;
             if (collision.gameObject.layer == LayerMask.NameToLayer("HarpoonableTrash")) {
