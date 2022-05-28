@@ -32,6 +32,8 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     [Tooltip("Sound effect for button presses")]
     [SerializeField] AudioClip ButtonPress;
 
+    public Animator anim;
+
     
     #region Public Methods
     public void RotateCW()
@@ -154,6 +156,11 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
             raftToRotate.transform.Rotate(0, touchDelta.x * 0.25f, 0);
             Debug.Log("Yes");
             
+        }
+
+        if (Input.touchCount > 0)
+        {
+            anim.SetTrigger("FiringHarpoon");
         }
     }
 }
