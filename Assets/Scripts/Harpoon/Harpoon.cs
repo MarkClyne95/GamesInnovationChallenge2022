@@ -45,7 +45,7 @@ namespace GIC.Harpoon{
         }
 
         private void Update() {
-            if (isHarpoonInAir) {
+            if (isHarpoonInAir && harpoonRb.velocity.sqrMagnitude > 0) {
                 transform.rotation = Quaternion.LookRotation(harpoonRb.velocity.normalized);
             }
         }

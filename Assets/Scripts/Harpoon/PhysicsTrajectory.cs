@@ -50,7 +50,7 @@ namespace GIC.Harpoon{
             
             float displacementY = Target.position.y - launchObjectRigidbody.position.y; // Calculate Py from diagram
             if (displacementY > trajectoyHeight) {
-                print("Couldn't calculate initial velocity to reach target. ");
+                print("Couldn't Calculate Launch Data: Height difference between harpoon and trash is greater than harpoon trajectory height");
                 data = default;
                 return false;
             }

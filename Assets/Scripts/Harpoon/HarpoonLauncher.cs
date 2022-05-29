@@ -23,7 +23,7 @@ namespace GIC.Harpoon{
         [SerializeField] private bool showRange;
 
 
-        private void FixedUpdate() {
+        private void Update() {
             if (Input.GetKey(KeyCode.K)) {
                 DrawTrajectory();
             }
@@ -83,7 +83,7 @@ namespace GIC.Harpoon{
         private void ThrowHarpoon(GameObject trash) {
             physicsTrajectory.Target = trash.transform;
             if (!physicsTrajectory.TryCalculateLaunchData(out var launchData)) {
-                print("Throw Failed");
+                //print("Throw Failed: Couldn't Calculate Launch Data");
                 return;
             }
             //--Get the velocity of the target if it has a rigidbody
