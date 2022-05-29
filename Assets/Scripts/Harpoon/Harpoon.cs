@@ -59,6 +59,7 @@ namespace GIC.Harpoon{
             harpoonRb.isKinematic = true;
             if (collision.gameObject.layer == LayerMask.NameToLayer("HarpoonableTrash")) {
                 transform.parent = collision.transform;
+                ResetHarpoon();
             }
             
 

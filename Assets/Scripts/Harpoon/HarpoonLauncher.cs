@@ -40,7 +40,7 @@ namespace GIC.Harpoon{
         /// <summary>
         /// Drawn the trajectory of the harpoon to the closest trash
         /// </summary>
-        private void DrawTrajectory() {
+        public void DrawTrajectory() {
             var closestGarbage = FindClosestTrash();
             if (closestGarbage == null) {
                 return;
@@ -52,7 +52,7 @@ namespace GIC.Harpoon{
             }
         }
 
-        private void LaunchHarpoon() {
+        public void LaunchHarpoon() {
             physicsTrajectory.ClearLine();
             var closestTrash = FindClosestTrash();
             //print("Closest Trash: " + closestTrash);

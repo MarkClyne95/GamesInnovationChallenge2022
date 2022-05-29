@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScene/LoadingScene.unity
     guid: 80e40784395d29641af12be395433643
+  - enabled: 1
+    path: Assets/Scenes/HarpoonTest/HarpoonTest.unity
+    guid: 6e0e84c7c2d434f47b817baec8aca3e8
   m_configObjects: {}

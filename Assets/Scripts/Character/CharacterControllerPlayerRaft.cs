@@ -1,4 +1,5 @@
 using GIC.River;
+using GIC.Harpoon;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     [Tooltip("The force to apply to the rigidbody to move it")]
     [SerializeField] float appliedForce = 0;
 
-    [Tooltip("The Rigidbody of the raft")]
+    [Tooltip("The Rigidbody component of the raft")]
     [SerializeField] Rigidbody rb;
 
     [Tooltip("The pause menu GameObject")]
@@ -32,7 +33,11 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     [Tooltip("Sound effect for button presses")]
     [SerializeField] AudioClip ButtonPress;
 
+    [Tooltip("Animator component of the player")]
     public Animator anim;
+
+    [Tooltip("Harpoon Launcher component")]
+    public HarpoonLauncher launcher;
 
     
     #region Public Methods
@@ -149,18 +154,30 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
     #endregion
 
     private void Update() {
-        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        //if two fingers or more are on the screen, enable rotation
+        if(Input.touchCount >= 2 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
             Vector3 touchDelta = Input.GetTouch(0).deltaPosition;
 
-            raftToRotate.transform.Rotate(0, touchDelta.x * 0.25f, 0);
+            raftToRotate.transform.Rotate(0, touchDelta.x * 0.1f, 0);
+            rb.AddForce(-Vector3.up * 10);
             Debug.Log("Yes");
-            
         }
 
-        if (Input.touchCount > 0)
+        // Fire harpoon on touch if number of fingers on the screen is less than 2 but greater than 0
+        if (Input.touchCount > 0 && Input.touchCount < 2)
         {
-            anim.SetTrigger("FiringHarpoon");
+            Touch touch = Input.GetTouch(0);
+            switch(touch.phase)
+            {
+                case TouchPhase.Began:
+                    launcher.DrawTrajectory();
+                    break;
+
+                case TouchPhase.Ended:
+                    launcher.LaunchHarpoon();
+                    break;
+            }
         }
     }
 }
