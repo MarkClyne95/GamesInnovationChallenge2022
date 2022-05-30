@@ -25,12 +25,11 @@ namespace GIC.Harpoon{
         /// <summary>
         /// T
         /// </summary>
-        /// <param name="initialVelocity">The initial velocity required to reach the target</param>
-        /// <param name="velocityOfTarget">This will be added onto the initial velocity so a moving target can be hit </param>
-        public void Throw(Vector3 initialVelocity, Vector3 velocityOfTarget = new Vector3()) {
+        /// <param name="velocity">The initial velocity required to reach the target</param>
+        public void Throw(Vector3 velocity) {
             harpoonRb.velocity = Vector3.zero;
             harpoonRb.isKinematic = false;
-            harpoonRb.AddForce(initialVelocity + velocityOfTarget, ForceMode.VelocityChange);
+            harpoonRb.AddForce(velocity, ForceMode.VelocityChange);
             harpoonRb.transform.parent = null;
             isHarpoonInAir = true;
         }
@@ -57,7 +56,7 @@ namespace GIC.Harpoon{
             //print("Harpoon Collision: " + collision.gameObject.name);
             isHarpoonInAir = false;
             harpoonRb.isKinematic = true;
-            if (collision.gameObject.layer == LayerMask.NameToLayer("HarpoonableTrash")) {
+            if (collision.gameObject.layer == LayerMask.NameToLayer("HarpoonableTrash") ||collision.gameObject.layer == LayerMask.NameToLayer("Default")) {
                 transform.parent = collision.transform;
                 ResetHarpoon();
             }

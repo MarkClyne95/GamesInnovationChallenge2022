@@ -11,5 +11,8 @@ namespace GIC.Harpoon{
             this.initialVelocity = initialVelocity;
             this.timeTotarget = timeTotarget;
         }
+        
+        public static LaunchData operator *(LaunchData a, float b)
+            => new LaunchData(a.initialVelocity * b, a.timeTotarget * b);
     }
 }

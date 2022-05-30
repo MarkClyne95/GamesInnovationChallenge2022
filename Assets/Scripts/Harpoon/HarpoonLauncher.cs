@@ -21,11 +21,22 @@ namespace GIC.Harpoon{
 
         [Tooltip("Draw a sphere to show the range of the harpoon launcher")]
         [SerializeField] private bool showRange;
+        
+        [Header("Throw Power")]
+        [Tooltip("The initial throw power when the player begins holding the throw button (throw power of one will hit the target)")]
+        [SerializeField] private float minThrowPower = 0.1f;
+        [Tooltip("The max throw power when the player is holding the throw button (throw power of one will hit the target)")]
+        [SerializeField] private float maxThrowPower = 1.5f;
+        [Tooltip("The time it takes to go from min to max throw power")]
+        [SerializeField] private float powerBuildTime = 2;
+        private float throwPower = 1;
+        private Coroutine launchBuildUpRoutine;
 
 
         private void Update() {
-            if (Input.GetKey(KeyCode.K)) {
-                DrawTrajectory();
+            if (Input.GetKeyDown(KeyCode.K)) {
+                //DrawTrajectory();
+                StartLaunchBuildUp();
             }
 
             if (Input.GetKeyUp(KeyCode.K)) {
@@ -34,6 +45,25 @@ namespace GIC.Harpoon{
 
             if (Input.GetKeyDown(KeyCode.L)) {
                 harpoon.ResetHarpoon();
+            }
+        }
+
+        public void StartLaunchBuildUp() {
+            if (launchBuildUpRoutine != null) {
+                StopCoroutine(launchBuildUpRoutine);
+            }
+            launchBuildUpRoutine = StartCoroutine(LaunchBuildUpRoutine());
+        }
+
+        //--Increase the throw power over time so that the trajectory line changes as the power builds up
+        private IEnumerator LaunchBuildUpRoutine() {
+            throwPower = minThrowPower;
+            float timeWhenRoutineStarts = Time.realtimeSinceStartup;
+            while (true) {              //Coroutine stopped when harpoon is launched
+                float timeSinceRoutineStarted = Time.realtimeSinceStartup - timeWhenRoutineStarts;
+                throwPower = Mathf.Lerp(minThrowPower, maxThrowPower, (timeSinceRoutineStarted / powerBuildTime));
+                DrawTrajectory();
+                yield return new WaitForFixedUpdate();
             }
         }
 
@@ -46,13 +76,20 @@ namespace GIC.Harpoon{
                 return;
             }
             physicsTrajectory.Target = closestGarbage.transform;
-            var pathPoints = physicsTrajectory.GetPathPoints();
+            if (!physicsTrajectory.TryCalculateLaunchData(out var launchData)) {
+                return;
+            }
+
+            var pathPoints = physicsTrajectory.GetPathPoints(launchData * throwPower);
             if (pathPoints.Length > 0) {
                 physicsTrajectory.RenderPath(pathPoints);
             }
         }
 
         public void LaunchHarpoon() {
+            if (launchBuildUpRoutine!=null) {
+                StopCoroutine(launchBuildUpRoutine);
+            }
             physicsTrajectory.ClearLine();
             var closestTrash = FindClosestTrash();
             //print("Closest Trash: " + closestTrash);
@@ -93,7 +130,7 @@ namespace GIC.Harpoon{
                 targetVelocity = targetRb.velocity;
             }
             var harpoonVelocity = launchData.initialVelocity;
-            harpoon.Throw(harpoonVelocity, targetVelocity);
+            harpoon.Throw((harpoonVelocity + targetVelocity) * throwPower);     //--Add the velocity of the target to account for the trash moving
         }
         
         //Draws the harpoon launchers range
