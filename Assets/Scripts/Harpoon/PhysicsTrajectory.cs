@@ -84,6 +84,27 @@ namespace GIC.Harpoon{
             if (!TryCalculateLaunchData(out var launchData)) {
                 return Array.Empty<Vector3>();
             }
+
+            return GetPathPoints(launchData);
+            /*Vector3 previousDrawPoint = launchObjectRigidbody.position;
+            int resolution = 30; // how many times are we checking the path when drawing the line
+            Vector3[] linePath = new Vector3[resolution + 1];
+
+            for (int i = 0; i <= resolution; i++) {
+                float simulationTime =
+                    i / (float)resolution *
+                    launchData.timeTotarget; // gives a variable going from 0 to the timeToTarget over the course of the for loop
+                Vector3 displacement = launchData.initialVelocity * simulationTime +
+                                       Vector3.up * gravity * simulationTime * simulationTime / 2f; // using 3rd suvat equation  s = ut + at^2 / 2
+                Vector3 drawPoint = launchObjectRigidbody.position + displacement;
+                Debug.DrawLine(previousDrawPoint, drawPoint, Color.green);
+                previousDrawPoint = drawPoint;
+                linePath[i] = drawPoint; // will miss first point i.e player position
+            }
+
+            return linePath;*/
+        }
+        public Vector3[] GetPathPoints(LaunchData launchData) {
             Vector3 previousDrawPoint = launchObjectRigidbody.position;
             int resolution = 30; // how many times are we checking the path when drawing the line
             Vector3[] linePath = new Vector3[resolution + 1];
@@ -142,8 +163,9 @@ namespace GIC.Harpoon{
         public void RenderPath(Vector3[] linePoints) {
             lineRenderer.positionCount = linePoints.Length;
             lineRenderer.SetPositions(linePoints);
-            lineRenderer.SetColors(Color.black, Color.black);
+            //lineRenderer.SetColors(Color.black, Color.black);
             //lineRenderer.SetWidth(0.5f, 0.5f);
+            
         }
 
         public void ClearLine() {

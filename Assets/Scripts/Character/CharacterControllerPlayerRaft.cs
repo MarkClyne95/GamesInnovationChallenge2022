@@ -171,7 +171,8 @@ public class CharacterControllerPlayerRaft : MonoBehaviour
             switch(touch.phase)
             {
                 case TouchPhase.Began:
-                    launcher.DrawTrajectory();
+                    //launcher.DrawTrajectory();
+                    launcher.StartLaunchBuildUp();
                     break;
 
                 case TouchPhase.Ended:
