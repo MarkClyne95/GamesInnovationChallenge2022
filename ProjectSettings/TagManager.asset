@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Trash
   - Boat
+  - KillTrash
   layers:
   - Default
   - TransparentFX

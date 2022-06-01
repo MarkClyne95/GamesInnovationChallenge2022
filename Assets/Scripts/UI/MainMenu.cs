@@ -12,6 +12,9 @@ public class MainMenu : MonoBehaviour {
     [Tooltip("Credits Canvas")]
     [SerializeField] GameObject creditsCanvas;
 
+    [Tooltip("Choose Level Canvas")]
+    [SerializeField] GameObject levelCanvas;
+
     //set the current boat to basic on first time playing
     private int currentBoat = (int)Boats.BASIC;
     #endregion
@@ -73,6 +76,25 @@ public class MainMenu : MonoBehaviour {
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void ChooseLevel()
+    {
+        levelCanvas.SetActive(true);
+        mmCanvas.SetActive(false);
+    }
+
+    public void Level1() => LoadTrigger.LoadScene("RiverScene");
+
+    public void Level2() => LoadTrigger.LoadScene("RiverScene");
+
+    public void Level3() => LoadTrigger.LoadScene("RiverScene");
+
+
+    public void CloseLevelSelect()
+    {
+        mmCanvas.SetActive(true);
+        levelCanvas.SetActive(false);
     }
     #endregion
 }
