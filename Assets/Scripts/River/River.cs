@@ -42,7 +42,7 @@ namespace GIC.River {
         private void Awake() {
             computer = GetComponentInChildren<SplineComputer>();
         }
-        public SplinePoint GetClosestPointOnSpline(Vector3 position) {
+        public static SplinePoint GetClosestPointOnSpline(SplineComputer computer, Vector3 position) {
             SplinePoint[] points = computer.GetPoints();
             SplinePoint closestSplinePoint = points[0];
             float closestDistance = float.MaxValue;

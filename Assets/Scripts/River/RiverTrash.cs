@@ -7,13 +7,14 @@ using System;
 namespace GIC.River {
     [RequireComponent(typeof(Rigidbody))]
     public class RiverTrash : MonoBehaviour {
-
-        private River river;
+        [field:SerializeField] public River River { get;set; }
         private SplineProjector projector;
         private Rigidbody rb;
         private SplinePoint closestPoint;
         private void Awake() {
-            river = FindObjectOfType<River>();
+            if (River == null) {
+                River = FindObjectOfType<River>();
+            }
             rb = GetComponent<Rigidbody>();
             projector = GetComponent<SplineProjector>();
         }
@@ -46,7 +47,7 @@ namespace GIC.River {
 
         private Vector3 GetForceFromRiverDirection() {
             Vector3 force = projector.result.forward;
-            force *= river.RiverStrength;
+            force *= River.RiverStrength;
             //--Add Randomness
             //force = Quaternion.ro
             return force;
@@ -56,9 +57,9 @@ namespace GIC.River {
             //float dstToCenter = toCenter.magnitude;
             //float dstFromedge = projector.result.size - dstToCenter;
             float percentAwayFromCenter = toCenter.magnitude / (projector.result.size/2);
-            if (percentAwayFromCenter > river.ApplyForceAwayFromEdge) {
+            if (percentAwayFromCenter > River.ApplyForceAwayFromEdge) {
                 Debug.DrawLine(transform.position, transform.position + toCenter);
-                return toCenter * river.ForceTowardsRiverCenter;
+                return toCenter * River.ForceTowardsRiverCenter;
             }
             else
                 return Vector3.zero;
@@ -66,9 +67,9 @@ namespace GIC.River {
         private Vector3 GetForceAwayFromRiverCenter() {
             Vector3 fromCenter =  transform.position - projector.result.position;
             float percentAwayFromCenter = fromCenter.magnitude / (projector.result.size / 2);
-            if (percentAwayFromCenter < river.ApplyForceAwayFromCenter) {
+            if (percentAwayFromCenter < River.ApplyForceAwayFromCenter) {
                 Debug.DrawLine(transform.position, transform.position + fromCenter);
-                return fromCenter * river.ForceAwayFromRiverCenter;
+                return fromCenter * River.ForceAwayFromRiverCenter;
             }
             else
                 return Vector3.zero;
