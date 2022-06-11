@@ -9,26 +9,14 @@ namespace GIC.River{
     public class TargetRiverSplineController : MonoBehaviour{
         public static SplineComputer[] RiverSplines { get; set; }
 
-        private void Start() {
+        private void Awake() {
             RiverSplines = GameObject.FindGameObjectsWithTag("RiverSpline").Select(x => x.GetComponent<SplineComputer>()).ToArray();
-
             //--Same as line above
             /*GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("RiverSpline");
             RiverSplines = new SplineComputer[gameObjects.Length];
             for (var i = 0; i < gameObjects.Length; i++) {
                 RiverSplines[i] =  gameObjects[i].GetComponent<SplineComputer>();
             }*/
-
-            foreach (var computer in RiverSplines) {
-                if (computer.triggerGroups.Length == 0) {
-                    continue;
-                }
-
-                SplineTrigger[] triggers = computer.triggerGroups[0].triggers;
-                foreach (var trigger in triggers) {
-                    trigger.onUserCross += OnCross;
-                }
-            }
         }
 
         //--Subscribe to Dreamteck Splines Trigger
@@ -47,7 +35,6 @@ namespace GIC.River{
                 if (computer.triggerGroups.Length == 0) {
                     continue;
                 }
-
                 SplineTrigger[] triggers = computer.triggerGroups[0].triggers;
                 foreach (var trigger in triggers) {
                     if (shouldSubscribe) {
