@@ -9,6 +9,8 @@ TagManager:
   - Trash
   - Boat
   - KillTrash
+  - Score
+  - Scoreboard
   layers:
   - Default
   - TransparentFX

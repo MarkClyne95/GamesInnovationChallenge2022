@@ -11,6 +11,7 @@ public class TrashCollection : MonoBehaviour
     [SerializeField]TMPro.TMP_Text factField;
     public AudioClip collectSound;
     private int trashCollected;
+    Score ScoreSet;
 
     public TMPro.TMP_Text countText;
     int trashCount;
@@ -43,6 +44,8 @@ public class TrashCollection : MonoBehaviour
     {
         trashCount = trash.Count;
         countText.text = trashCount.ToString();
+        ScoreSet = GameObject.FindGameObjectWithTag("Score").GetComponent<Score>();
+        ScoreSet.SetScoreInUI();
     }
 
     private void FixedUpdate()
@@ -67,6 +70,8 @@ public class TrashCollection : MonoBehaviour
                     {
                         audioSrc.PlayOneShot(collectSound);
                         anim.SetTrigger("PickingUp");
+                        ScoreSet.OverallScore += 10;
+                        ScoreSet.SetScoreInUI();
                         trash.Remove(clickedObject);
                         countText.text = trash.Count.ToString();
                         Destroy(clickedObject);

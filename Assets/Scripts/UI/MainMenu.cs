@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
+
 public class MainMenu : MonoBehaviour {
 
     #region private properties
@@ -14,6 +16,9 @@ public class MainMenu : MonoBehaviour {
 
     [Tooltip("Choose Level Canvas")]
     [SerializeField] GameObject levelCanvas;
+
+    [Tooltip("Score Text")]
+    [SerializeField] GameObject Score;
 
     //set the current boat to basic on first time playing
     private int currentBoat = (int)Boats.BASIC;
@@ -35,7 +40,7 @@ public class MainMenu : MonoBehaviour {
     }
 
     private void Start() {
-        
+        Score.SetActive(false);
     }
 
     private void Awake() {
@@ -54,12 +59,14 @@ public class MainMenu : MonoBehaviour {
     {
         mmCanvas.SetActive(false);
         upgradeCanvas.SetActive(true);
+        Score.SetActive(true);
     }
 
     public void CloseUpgradeMenu()
     {
         mmCanvas.SetActive(true);
         upgradeCanvas.SetActive(false);
+        Score.SetActive(false);
     }
     public void OpenCreditsMenu()
     {
