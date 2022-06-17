@@ -20,6 +20,10 @@ public class MainMenu : MonoBehaviour {
     [Tooltip("Score Text")]
     [SerializeField] GameObject Score;
 
+    [Header("Save System Stuff")]
+    [SerializeField]SC_MasterSaveLoad saveLoadSystem;
+    [SerializeField]Score Money;
+
     //set the current boat to basic on first time playing
     private int currentBoat = (int)Boats.BASIC;
     #endregion
@@ -41,6 +45,8 @@ public class MainMenu : MonoBehaviour {
 
     private void Start() {
         Score.SetActive(false);
+        Money = GameObject.FindGameObjectWithTag("Score").GetComponent<Score>();
+        saveLoadSystem.LoadGame();
     }
 
     private void Awake() {
@@ -60,6 +66,8 @@ public class MainMenu : MonoBehaviour {
         mmCanvas.SetActive(false);
         upgradeCanvas.SetActive(true);
         Score.SetActive(true);
+        
+        Money.SetScoreInUI();
     }
 
     public void CloseUpgradeMenu()
@@ -102,6 +110,14 @@ public class MainMenu : MonoBehaviour {
     {
         mmCanvas.SetActive(true);
         levelCanvas.SetActive(false);
+    }
+
+    public void ResetMoney()
+    {
+        Debug.Log("I've reset");
+        saveLoadSystem.ResetData();
+        saveLoadSystem.LoadGame();
+        Money.SetScoreInUI();
     }
     #endregion
 }

@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
-    int overallScore = 0;
+    [SerializeField]int overallScore = 0;
     [SerializeField] TMPro.TMP_Text Scoreboard;
+
+    public static Score instance;
 
     public int OverallScore
     {
@@ -16,6 +18,14 @@ public class Score : MonoBehaviour
     }
     private void Awake()
     {
+        #region Singleton
+
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+        #endregion
+
         DontDestroyOnLoad(gameObject);
         Scoreboard = GameObject.FindGameObjectWithTag("Scoreboard").GetComponent<TMPro.TMP_Text>();
         Scoreboard.text = ("Money: $ " + overallScore);

@@ -11,6 +11,7 @@ TagManager:
   - KillTrash
   - Score
   - Scoreboard
+  - SaveLoad
   layers:
   - Default
   - TransparentFX
